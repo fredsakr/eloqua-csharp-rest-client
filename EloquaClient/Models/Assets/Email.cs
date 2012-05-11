@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Models.Content;
 
 namespace Eloqua.Models.Assets
 {
@@ -10,13 +11,18 @@ namespace Eloqua.Models.Assets
     public class Email : IRestObject
     {
         public string BouncebackEmail { get; set; }
-        public string IsPlainTextEditable { get; set; }
+        public int EmailFooterId { get; set; }
+        public int EmailGroupId { get; set; }
+        public int EmailHeaderId { get; set; }
+        public int EncodingId { get; set; }
+        public RawHtmlContent HtmlContent { get; set; }
+        public bool IsPlainTextEditable { get; set; }
         public string PlainText { get; set; }
         public string ReplyToName { get; set; }
         public string ReplyToEmail { get; set; }
         public string SenderEmail { get; set; }
         public string SenderName { get; set; }
-        public string SendPlainTextOnly { get; set; }
+        public bool SendPlainTextOnly { get; set; }
         public string Subject { get; set; }
 
         #region IRestObject

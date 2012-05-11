@@ -33,6 +33,7 @@ namespace Eloqua
             return response.Data;
         }
 
+        // todo : each method is expected to implement its own error handling - based on the HTTP Method
         internal T Get<T>(IRestObject restObj) where T : new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, restObj);
