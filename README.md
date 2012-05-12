@@ -8,7 +8,7 @@ Eloqua C# Rest Client
 ### GET (item)
 var client = new Eloqua.Client("site", "user", "pass");
 
-var email = client.Email.Get(1);
+var email = client.Email.Get(1); // integer Id of the Email
 
 ### GET (list)
 var client = new Eloqua.Client("site", "user", "pass");
@@ -30,8 +30,6 @@ var client = new Eloqua.Client("site", "user", "pass");
 var email = client.Email.Put(Email);
 
 ### DELETE
-var emailId = 1;
-
 var client = new Eloqua.Client("site", "user", "pass");
 
-var email = client.Email.Delete(emailId);
+var email = client.Email.Delete(1); // integer Id of the Email
