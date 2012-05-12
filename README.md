@@ -10,6 +10,7 @@ var client = new Eloqua.Client("site", "user", "pass");
 
 ### GET (item)
 int emailId = 1;
+
 Email email = client.Email.Get(emailId);
 
 ### GET (list)
