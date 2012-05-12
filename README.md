@@ -19,8 +19,12 @@ List<Email> emails = client.Email.Get("searchTerm", pageNumber, pageSize);
 ### POST
 Email email = new Email() { ... };
 
+email = client.Email.Post(Email);
+
 ### PUT
-var email = new Email() { ... };
+Email email = new Email() { ... };
+
+email = client.Email.Put(Email);
 
 ### DELETE
 int emailId = 1;
