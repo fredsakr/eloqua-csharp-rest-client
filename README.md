@@ -5,31 +5,23 @@ Eloqua C# Rest Client
 
 ## Usage
 
-### GET (item)
+### Create Client
 var client = new Eloqua.Client("site", "user", "pass");
 
-var email = client.Email.Get(1); // integer Id of the Email
+### GET (item)
+int emailId = 1;
+Email email = client.Email.Get(emailId);
 
 ### GET (list)
-var client = new Eloqua.Client("site", "user", "pass");
-
-var emails = client.Email.Get("searchTerm", pageNumber, pageSize);
+List<Email> emails = client.Email.Get("searchTerm", pageNumber, pageSize);
 
 ### POST
-var email = new Email() { ... };
-
-var client = new Eloqua.Client("site", "user", "pass");
-
-var email = client.Email.Post(Email);
+Email email = new Email() { ... };
 
 ### PUT
 var email = new Email() { ... };
 
-var client = new Eloqua.Client("site", "user", "pass");
-
-var email = client.Email.Put(Email);
-
 ### DELETE
-var client = new Eloqua.Client("site", "user", "pass");
+int emailId = 1;
 
-var email = client.Email.Delete(1); // integer Id of the Email
+client.Email.Delete(emailId);
