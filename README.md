@@ -14,7 +14,7 @@ int emailId = 1;
 Email email = client.Email.Get(emailId);
 
 ### GET (list)
-List<Email> emails = client.Email.Get("searchTerm", pageNumber, pageSize);
+List&lt;Email&gt; emails = client.Email.Get("searchTerm", pageNumber, pageSize);
 
 ### POST
 Email email = new Email() { ... };
