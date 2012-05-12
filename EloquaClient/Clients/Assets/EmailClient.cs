@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Eloqua.Models.Assets;
+﻿using Eloqua.Models.Assets;
 
 namespace Eloqua.Clients.Assets
 {
@@ -27,6 +26,16 @@ namespace Eloqua.Clients.Assets
                                                        PageNumber = pageNumber, 
                                                        PageSize = pageSize
                                                    });
+        }
+
+        public Email Post(Email email)
+        {
+            return _sender.Post<Email>(email, email);
+        }
+
+        public Email Put(Email email)
+        {
+            return _sender.Put<Email>(email, email);
         }
 
         public void Delete(int id)

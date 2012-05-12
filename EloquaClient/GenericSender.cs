@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using System;
+using RestSharp;
 
 namespace Eloqua
 {
@@ -30,10 +31,14 @@ namespace Eloqua
         private T Execute<T>(IRestRequest request) where T : new()
         {
             IRestResponse<T> response = Client.Execute<T>(request);
+
+            if (response.ResponseStatus != ResponseStatus.Completed)
+            {
+                throw new ApiException(new Exception(response.ErrorMessage, response.ErrorException));
+            }
             return response.Data;
         }
 
-        // todo : each method is expected to implement its own error handling - based on the HTTP Method
         internal T Get<T>(IRestObject restObj) where T : new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, restObj);
@@ -43,18 +48,20 @@ namespace Eloqua
         internal void Delete<T>(IRestObject restObj) where T : new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Delete, restObj);
-            Client.Execute<T>(request);
+            Execute<T>(request);
         }
 
         internal T Post<T>(T rest, IRestObject restObj) where T : new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Post, restObj);
+            request.AddBody(restObj);
             return Execute<T>(request);
         }
 
         internal T Put<T>(T rest, IRestObject restObj) where T : new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Put, restObj);
+            request.AddBody(restObj);
             return Execute<T>(request);
         }
 

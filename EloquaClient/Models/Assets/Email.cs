@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Eloqua.Models.Content;
+using System.ServiceModel;
 
 namespace Eloqua.Models.Assets
 {
@@ -10,25 +11,25 @@ namespace Eloqua.Models.Assets
 
     public class Email : IRestObject
     {
-        public string BouncebackEmail { get; set; }
-        public int EmailFooterId { get; set; }
-        public int EmailGroupId { get; set; }
-        public int EmailHeaderId { get; set; }
-        public int EncodingId { get; set; }
+        public string bouncebackEmail { get; set; }
+        public int emailFooterId { get; set; }
+        public int emailGroupId { get; set; }
+        public int emailHeaderId { get; set; }
+        public int encodingId { get; set; }
         public RawHtmlContent HtmlContent { get; set; }
-        public bool IsPlainTextEditable { get; set; }
-        public string PlainText { get; set; }
-        public string ReplyToName { get; set; }
-        public string ReplyToEmail { get; set; }
-        public string SenderEmail { get; set; }
-        public string SenderName { get; set; }
-        public bool SendPlainTextOnly { get; set; }
-        public string Subject { get; set; }
+        public bool isPlainTextEditable { get; set; }
+        public string plainText { get; set; }
+        public string replyToName { get; set; }
+        public string replyToEmail { get; set; }
+        public string senderEmail { get; set; }
+        public string senderName { get; set; }
+        public bool sendPlainTextOnly { get; set; }
+        public string subject { get; set; }
 
         #region IRestObject
 
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string name { get; set; }
 
         public string RequestResource
         {

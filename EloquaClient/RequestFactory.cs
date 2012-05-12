@@ -18,6 +18,7 @@ namespace Eloqua
         {
             var request = new RestRequest
                               {
+                                  RequestFormat = DataFormat.Json,
                                   RootElement = restObj.RequestResourceName
                               };
 
@@ -29,11 +30,11 @@ namespace Eloqua
                         break;
                     case RequestType.Put:
                         request.Method = Method.PUT;
-                        request.Resource = restObj.RequestResource + "/" + restObj.Id;
+                        request.Resource = restObj.RequestResource;
                         break;
                     case RequestType.Post:
                         request.Method = Method.POST;
-                        request.Resource = restObj.RequestResource + "/" + restObj.Id;
+                        request.Resource = restObj.RequestResource;
                         break;
                     case RequestType.Search:
                         request.Method = Method.GET;
