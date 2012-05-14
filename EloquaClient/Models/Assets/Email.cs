@@ -1,12 +1,29 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Eloqua.Models.Content;
 using System.ServiceModel;
 
 namespace Eloqua.Models.Assets
 {
-    public class Emails
+    public class Emails : IRestObject
     {
         public List<Email> elements { get; set; }
+
+        public int Id { get; set; }
+
+        public string name { get; set; }
+
+        public string RequestResource { get; set; }
+
+        public string RequestResourceName { get; set; }
+
+        public string Depth { get; set; }
+
+        public int PageNumber { get; set; }
+
+        public int PageSize { get; set; }
+
+        public string SearchTerm { get; set; }
     }
 
     public class Email : IRestObject

@@ -1,4 +1,5 @@
 ﻿using System;
+using Eloqua.Models.Assets;
 using RestSharp;
 
 namespace Eloqua
@@ -39,33 +40,33 @@ namespace Eloqua
             return response.Data;
         }
 
-        internal T Get<T>(IRestObject restObj) where T : new()
+        internal T Get<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, restObj);
             return Execute<T>(request);
         }
 
-        internal void Delete<T>(IRestObject restObj) where T : new()
+        internal void Delete<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Delete, restObj);
             Execute<T>(request);
         }
 
-        internal T Post<T>(T rest, IRestObject restObj) where T : new()
+        internal T Post<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Post, restObj);
             request.AddBody(restObj);
             return Execute<T>(request);
         }
 
-        internal T Put<T>(T rest, IRestObject restObj) where T : new()
+        internal T Put<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Put, restObj);
             request.AddBody(restObj);
             return Execute<T>(request);
         }
 
-        internal T Search<T>(IRestObject restObj) where T : new()
+        internal T Search<T>(Email restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, restObj);
             return Execute<T>(request);

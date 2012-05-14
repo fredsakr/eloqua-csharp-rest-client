@@ -30,12 +30,12 @@ namespace Eloqua.Clients.Assets
 
         public Email Post(Email email)
         {
-            return _sender.Post<Email>(email, email);
+            return _sender.Post<Email>(email);
         }
 
         public Email Put(Email email)
         {
-            return _sender.Put<Email>(email, email);
+            return _sender.Put<Email>(email);
         }
 
         public void Delete(int id)
