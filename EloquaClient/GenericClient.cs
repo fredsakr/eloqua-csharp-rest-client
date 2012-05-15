@@ -4,15 +4,15 @@ namespace Eloqua
 {
     public class GenericClient<T> where T : IRestObject, new()
     {
-        public GenericClient(GenericSender sender)
+        public GenericClient(GenericRequest request)
         {
-            _sender = sender;
+            _request = request;
         }
-        readonly GenericSender _sender;
+        readonly GenericRequest _request;
 
         public T Get(int id)
         {
-            return _sender.Get<T> (new T
+            return _request.Get<T> (new T
                                           {
                                               Id = id
                                           });
@@ -20,7 +20,7 @@ namespace Eloqua
 
         public IList<T> Get(string search, int pageNumber, int pageSize)
         {
-            return _sender.Search<T> (new T
+            return _request.Search<T> (new T
                                                    {
                                                        SearchTerm = search, 
                                                        PageNumber = pageNumber, 
@@ -30,17 +30,17 @@ namespace Eloqua
 
         public T Post(T restObj)
         {
-            return _sender.Post<T>(restObj);
+            return _request.Post<T>(restObj);
         }
 
         public T Put(T restObj)
         {
-            return _sender.Put<T>(restObj);
+            return _request.Put<T>(restObj);
         }
 
         public void Delete(int id)
         {
-            _sender.Delete<T> (new T
+            _request.Delete<T> (new T
                                       {
                                           Id = id
                                       });

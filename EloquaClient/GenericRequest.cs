@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Eloqua.Models.Assets;
 using RestSharp;
 
 namespace Eloqua
 {
-    public class GenericSender
+    public class GenericRequest
     {
         #region constructors
 
-        public GenericSender(string site, string user, string password)
+        public GenericRequest(string site, string user, string password)
         {
             Client = new RestClient
             {

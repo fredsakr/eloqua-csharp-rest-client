@@ -6,11 +6,11 @@ namespace Eloqua
     {
         #region constructor
 
-        protected GenericSender GenericSender;
+        protected GenericRequest GenericRequest;
 
         public Client(string site, string user, string password)
         {
-            GenericSender = new GenericSender(site, user, password);
+            GenericRequest = new GenericRequest(site, user, password);
         }
 
         #endregion
@@ -19,7 +19,7 @@ namespace Eloqua
 
         public EmailClient Email
         {
-            get { return _emailClient ?? (_emailClient = new EmailClient(GenericSender)); }
+            get { return _emailClient ?? (_emailClient = new EmailClient(GenericRequest)); }
         }
         private EmailClient _emailClient;
 
