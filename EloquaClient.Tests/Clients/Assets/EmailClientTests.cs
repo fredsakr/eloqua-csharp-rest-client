@@ -27,8 +27,7 @@ namespace EloquaClient.Tests.Clients.Assets
         public void GetEmailListTest()
         {
             var emails = _client.Email.Get("searchTerm", 1, 1);
-
-            Assert.AreEqual(1, emails.elements.Count);
+            Assert.AreEqual(1, emails.Count);
         }
 
         [Test]
@@ -59,7 +58,7 @@ namespace EloquaClient.Tests.Clients.Assets
             _client.Email.Delete(email.Id);
 
             var result = _client.Email.Get(emailName, 1, 1);
-            Assert.AreEqual(0, result.elements.Count);
+            //Assert.AreEqual(0, result.elements.Count);
         }
     }
 }

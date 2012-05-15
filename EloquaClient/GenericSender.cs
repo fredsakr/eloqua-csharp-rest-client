@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Eloqua.Models.Assets;
 using RestSharp;
 
@@ -66,10 +67,10 @@ namespace Eloqua
             return Execute<T>(request);
         }
 
-        internal T Search<T>(Email restObj) where T : IRestObject, new()
+        internal List<T> Search<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, restObj);
-            return Execute<T>(request);
+            return Execute<List<T>>(request);
         }
 
         #endregion

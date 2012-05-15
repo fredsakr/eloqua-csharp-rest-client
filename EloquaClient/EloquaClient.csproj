@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ApiException.cs" />
     <Compile Include="Clients\AssetContainer.cs" />
+    <Compile Include="GenericClient.cs" />
     <Compile Include="Models\Assets\Email.cs" />
     <Compile Include="Clients\Assets\EmailClient.cs" />
     <Compile Include="Authenticator.cs" />

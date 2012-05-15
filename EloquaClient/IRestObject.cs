@@ -2,7 +2,7 @@
 {
     public interface IRestObject
     {
-        int Id { get; }
+        int Id { get; set; }
         string name { get; set; }
         string RequestResource { get; }
         string RequestResourceName { get; }
