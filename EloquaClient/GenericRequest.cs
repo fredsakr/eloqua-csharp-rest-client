@@ -66,12 +66,28 @@ namespace Eloqua
             return Execute<T>(request);
         }
 
-        internal List<T> Search<T>(T restObj) where T : IRestObject, new()
+        internal RestObjectList<T> Search<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, restObj);
-            return Execute<List<T>>(request);
+            return ExecuteForList<T>(request);
+        }
+
+        private RestObjectList<T> ExecuteForList<T>(IRestRequest request) where T : new()
+        {
+            IRestResponse<RestObjectList<T>> response = Client.Execute<RestObjectList<T>>(request);
+
+            if (response.ResponseStatus != ResponseStatus.Completed)
+            {
+                throw new ApiException(new Exception(response.ErrorMessage, response.ErrorException));
+            }
+            return response.Data;
         }
 
         #endregion
+    }
+
+    public class RestObjectList<T>
+    {
+        public List<T> elements { get; set; }
     }
 }

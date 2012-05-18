@@ -26,11 +26,11 @@ namespace Eloqua
             {
                     case RequestType.Get:
                         request.Method = Method.GET;
-                        request.Resource = restObj.RequestResource + "/" + restObj.Id;
+                        request.Resource = restObj.RequestResource + "/" + restObj.id;
                         break;
                     case RequestType.Put:
                         request.Method = Method.PUT;
-                        request.Resource = restObj.RequestResource;
+                        request.Resource = restObj.RequestResource + "/" + restObj.id;
                         break;
                     case RequestType.Post:
                         request.Method = Method.POST;
@@ -44,7 +44,7 @@ namespace Eloqua
                         break;
                     case RequestType.Delete:
                         request.Method = Method.DELETE;
-                        request.Resource = restObj.RequestResource + "/" + restObj.Id;
+                        request.Resource = restObj.RequestResource + "/" + restObj.id;
                         break;
                     default:
                         throw new NotSupportedException(type.ToString());

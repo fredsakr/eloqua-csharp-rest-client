@@ -1,8 +1,7 @@
-﻿
-namespace Eloqua.Models.Content
+﻿namespace Eloqua.Models.Content
 {
     public class RawHtmlContent : HtmlContent
     {
-        public string Html { get; set; }
+        public string htmlBody { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace Eloqua.Models.Content
+﻿namespace Eloqua.Models.Content
 {
     public abstract class HtmlContent
     {
