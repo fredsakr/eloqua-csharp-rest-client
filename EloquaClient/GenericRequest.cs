@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RestSharp;
 
@@ -36,11 +35,10 @@ namespace Eloqua
 
             if (response.ResponseStatus != ResponseStatus.Completed)
             {
-                throw new ApiException(new Exception(response.ErrorMessage, response.ErrorException));
+                throw response.ErrorException;
             }
             return response.Data;
         }
-
 
         public T Get<T>(int id) where T : IRestObject, new()
         {
@@ -80,7 +78,7 @@ namespace Eloqua
         #endregion
     }
 
-    public class RestObjectList<T>
+    internal class RestObjectList<T>
     {
         public List<T> elements { get; set; }
     }

@@ -5,7 +5,6 @@
         int id { get; set; }
         string name { get; set; }
         string RequestResource { get; }
-        string RequestResourceName { get; }
 
         string Depth { get; set; }
         int PageNumber { get; set; }

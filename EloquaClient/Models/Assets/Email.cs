@@ -29,11 +29,6 @@ namespace Eloqua.Models.Assets
             get { return "/assets/email"; }
         }
 
-        public string RequestResourceName
-        {
-            get { return "Email"; }
-        }
-
         public string Depth { get; set; }
         public int PageNumber { get; set; }
         public int PageSize { get; set; }

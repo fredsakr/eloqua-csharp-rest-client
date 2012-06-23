@@ -1,4 +1,4 @@
-﻿using Eloqua.Clients.Assets;
+﻿using Eloqua.Models.Assets;
 
 namespace Eloqua
 {
@@ -15,13 +15,13 @@ namespace Eloqua
 
         #endregion
 
-        #region clients
+        #region email client
 
-        public EmailClient Email
+        public GenericClient<Email> Email
         {
-            get { return _emailClient ?? (_emailClient = new EmailClient(GenericRequest)); }
+            get { return _emailClient ?? (_emailClient = new GenericClient<Email>(GenericRequest)); }
         }
-        private EmailClient _emailClient;
+        private GenericClient<Email> _emailClient;
 
         #endregion
     }

@@ -19,7 +19,7 @@ namespace Eloqua
             var request = new RestRequest
                               {
                                   RequestFormat = DataFormat.Json,
-                                  RootElement = restObj.RequestResourceName
+                                  RootElement = restObj.GetType().ToString()
                               };
 
             switch (type)
