@@ -1,4 +1,6 @@
-﻿namespace Eloqua
+﻿using System.Collections.Generic;
+
+namespace Eloqua
 {
     public class GenericClient<T> where T : IRestObject, new()
     {
@@ -10,20 +12,12 @@
 
         public T Get(int id)
         {
-            return _request.Get<T> (new T
-                                          {
-                                              id = id
-                                          });
+            return _request.Get<T> (id);
         }
 
-        public RestObjectList<T> Get(string search, int pageNumber, int pageSize)
+        public List<T> Get(string search, int pageNumber, int pageSize)
         {
-            return _request.Search<T> (new T
-                                                   {
-                                                       SearchTerm = search, 
-                                                       PageNumber = pageNumber, 
-                                                       PageSize = pageSize
-                                                   });
+            return _request.Get<T> (search, pageNumber, pageSize);
         }
 
         public T Post(T restObj)
@@ -36,12 +30,9 @@
             return _request.Put<T>(restObj);
         }
 
-        public void Delete(int? id)
+        public void Delete(int id)
         {
-            _request.Delete<T> (new T
-                                      {
-                                          id = id
-                                      });
+            _request.Delete<T> (id);
         }
     }
 }

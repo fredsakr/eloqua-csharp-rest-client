@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RestSharp;
 
 namespace Eloqua
@@ -27,7 +28,7 @@ namespace Eloqua
 
         #endregion
 
-        #region generic methods
+        #region methods
 
         private T Execute<T>(IRestRequest request) where T : new()
         {
@@ -40,49 +41,42 @@ namespace Eloqua
             return response.Data;
         }
 
-        internal T Get<T>(T restObj) where T : IRestObject, new()
+
+        public T Get<T>(int id) where T : IRestObject, new()
         {
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, restObj);
+            var item = new T { id = id };
+            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, item);
             return Execute<T>(request);
         }
 
-        internal void Delete<T>(T restObj) where T : IRestObject, new()
+        public List<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : IRestObject, new()
         {
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Delete, restObj);
+            var items = new T { SearchTerm = searchTerm, PageNumber = pageNumber, PageSize = pageSize };
+            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, items);
+            var result = Execute<RestObjectList<T>>(request);
+            return result.elements.ToList();
+        }
+
+        public void Delete<T>(int id) where T : IRestObject, new()
+        {
+            var item = new T { id = id };
+            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Delete, item);
             Execute<T>(request);
         }
 
-        internal T Post<T>(T restObj) where T : IRestObject, new()
+        public T Post<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Post, restObj);
             request.AddBody(restObj);
             return Execute<T>(request);
         }
 
-        internal T Put<T>(T restObj) where T : IRestObject, new()
+        public T Put<T>(T restObj) where T : IRestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Put, restObj);
             request.AddBody(restObj);
             return Execute<T>(request);
         }
-
-        internal RestObjectList<T> Search<T>(T restObj) where T : IRestObject, new()
-        {
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, restObj);
-            return ExecuteForList<T>(request);
-        }
-
-        private RestObjectList<T> ExecuteForList<T>(IRestRequest request) where T : new()
-        {
-            IRestResponse<RestObjectList<T>> response = Client.Execute<RestObjectList<T>>(request);
-
-            if (response.ResponseStatus != ResponseStatus.Completed)
-            {
-                throw new ApiException(new Exception(response.ErrorMessage, response.ErrorException));
-            }
-            return response.Data;
-        }
-
         #endregion
     }
 

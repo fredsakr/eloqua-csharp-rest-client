@@ -12,7 +12,7 @@ namespace EloquaClient.Tests.Clients.Assets
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Eloqua.Client("site", "user", "pass");
+            _client = new Eloqua.Client("site", "user", "password");
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace EloquaClient.Tests.Clients.Assets
         public void GetEmailListTest()
         {
             var result = _client.Email.Get("*", 1, 1);
-            Assert.AreEqual(1, result.elements.Count);
+            Assert.AreEqual(1, result.Count);
         }
 
         [Test]
@@ -101,7 +101,7 @@ namespace EloquaClient.Tests.Clients.Assets
             _client.Email.Delete(email.id);
 
             var result = _client.Email.Get(emailName, 1, 1);
-            Assert.AreEqual(0, result.elements.Count);
+            Assert.AreEqual(0, result.Count);
         }
     }
 }
