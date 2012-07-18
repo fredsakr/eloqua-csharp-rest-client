@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using RestSharp;
+﻿using RestSharp;
+using Eloqua.Models;
 
 namespace Eloqua
 {
@@ -47,12 +46,12 @@ namespace Eloqua
             return Execute<T>(request);
         }
 
-        public List<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : IRestObject, new()
+        public RequestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : IRestObject, new()
         {
             var items = new T { SearchTerm = searchTerm, PageNumber = pageNumber, PageSize = pageSize };
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, items);
-            var result = Execute<RestObjectList<T>>(request);
-            return result.elements.ToList();
+            var result = Execute<RequestObjectList<T>>(request);
+            return result;
         }
 
         public void Delete<T>(int id) where T : IRestObject, new()
@@ -76,10 +75,5 @@ namespace Eloqua
             return Execute<T>(request);
         }
         #endregion
-    }
-
-    internal class RestObjectList<T>
-    {
-        public List<T> elements { get; set; }
     }
 }

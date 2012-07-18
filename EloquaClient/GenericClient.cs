@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Models;
 
 namespace Eloqua
 {
@@ -15,7 +16,7 @@ namespace Eloqua
             return _request.Get<T> (id);
         }
 
-        public List<T> Get(string search, int pageNumber, int pageSize)
+        public RequestObjectList<T> Get(string search, int pageNumber, int pageSize)
         {
             return _request.Get<T> (search, pageNumber, pageSize);
         }
