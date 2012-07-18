@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace Eloqua
+namespace Eloqua.Api.Rest.Client
 {
     internal class Authenticator : IAuthenticator
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Eloqua.Models
+namespace Eloqua.Api.Rest.Client.Models
 {
     public class RequestObjectList<T>
     {

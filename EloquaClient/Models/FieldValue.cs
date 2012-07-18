@@ -1,4 +1,4 @@
-﻿namespace Eloqua.Models
+﻿namespace Eloqua.Api.Rest.Client.Models
 {
     public class FieldValue
     {

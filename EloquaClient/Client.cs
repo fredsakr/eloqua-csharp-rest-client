@@ -1,7 +1,7 @@
-﻿using Eloqua.Models.Assets;
-using Eloqua.Models.Data;
+﻿using Eloqua.Api.Rest.Client.Models.Assets;
+using Eloqua.Api.Rest.Client.Models.Data;
 
-namespace Eloqua
+namespace Eloqua.Api.Rest.Client
 {
     public class Client
     {
@@ -16,7 +16,8 @@ namespace Eloqua
 
         #endregion
 
-        #region Email Client
+
+        #region Assets
 
         public GenericClient<Email> Email
         {
@@ -24,27 +25,37 @@ namespace Eloqua
         }
         private GenericClient<Email> _emailClient;
 
-        #endregion
-
-        #region LandingPage Client
-
         public GenericClient<LandingPage> LandingPage
         {
-            get { return _segment ?? (_segment = new GenericClient<LandingPage>(GenericRequest)); }
+            get { return _landingPage ?? (_landingPage = new GenericClient<LandingPage>(GenericRequest)); }
         }
-        private GenericClient<LandingPage> _segment;
+        private GenericClient<LandingPage> _landingPage;
 
         #endregion
 
-        #region Segment Client
 
-        public GenericClient<Segment> Segment
+        #region Contacts
+
+        public GenericClient<Contact> Contact
         {
-            get { return _landingPage ?? (_landingPage = new GenericClient<Segment>(GenericRequest)); }
+            get { return _contactClient ?? (_contactClient = new GenericClient<Contact>(GenericRequest)); }
         }
-        private GenericClient<Segment> _landingPage;
+        private GenericClient<Contact> _contactClient;
+
+        public GenericClient<ContactSegment> ContactSegment
+        {
+            get { return _contactSegment ?? (_contactSegment = new GenericClient<ContactSegment>(GenericRequest)); }
+        }
+        private GenericClient<ContactSegment> _contactSegment;
+
+        public GenericClient<ContactList> ContactList
+        {
+            get { return _contactList ?? (_contactList = new GenericClient<ContactList>(GenericRequest)); }
+        }
+        private GenericClient<ContactList> _contactList;
 
         #endregion
+
 
         #region Custom Object
 

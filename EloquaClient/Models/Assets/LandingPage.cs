@@ -1,6 +1,6 @@
-﻿using Eloqua.Models.Content;
+﻿using Eloqua.Api.Rest.Client.Models.Content;
 
-namespace Eloqua.Models.Assets
+namespace Eloqua.Api.Rest.Client.Models.Assets
 {
     public class LandingPage : IRestObject
     {

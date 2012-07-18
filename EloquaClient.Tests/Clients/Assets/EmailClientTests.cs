@@ -1,18 +1,18 @@
 ﻿using System;
+using Eloqua.Api.Rest.Client.Models.Assets;
 using NUnit.Framework;
-using Eloqua.Models.Assets;
 
-namespace EloquaClient.Tests.Clients.Assets
+namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
 {
     [TestFixture]
     public class EmailClientTests
     {
-        private Eloqua.Client _client;
+        private Client _client;
 
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Eloqua.Client("site", "user", "password");
+            _client = new Client("site", "user", "password");
         }
 
         [Test]

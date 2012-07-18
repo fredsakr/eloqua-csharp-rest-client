@@ -1,12 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace Eloqua.Api.Rest.Client.Models.Data
+﻿
+namespace Eloqua.Api.Rest.Client.Models.Assets
 {
-    public class CustomObject : IRestObject
+    public class ContactSegment : IRestObject
     {
-        public int? contactId { get; set; }
-        public string currentStatus { get; set; }
-        public List<FieldValue> fieldValues { get; set; }
+        public int? count { get; set; }
 
         #region IRestObject
 
@@ -15,7 +12,7 @@ namespace Eloqua.Api.Rest.Client.Models.Data
 
         public string RequestResource
         {
-            get { return "/assets/customObject"; }
+            get { return "/assets/contact/segment"; }
         }
 
         public string Depth { get; set; }

@@ -1,7 +1,7 @@
-﻿using RestSharp;
-using Eloqua.Models;
+﻿using Eloqua.Api.Rest.Client.Models;
+using RestSharp;
 
-namespace Eloqua
+namespace Eloqua.Api.Rest.Client
 {
     public class GenericRequest
     {

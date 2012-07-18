@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using Eloqua.Models;
+﻿using Eloqua.Api.Rest.Client.Models;
 
-namespace Eloqua
+namespace Eloqua.Api.Rest.Client
 {
     public class GenericClient<T> where T : IRestObject, new()
     {

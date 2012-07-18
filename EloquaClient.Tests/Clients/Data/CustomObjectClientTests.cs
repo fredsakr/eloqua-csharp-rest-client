@@ -1,16 +1,16 @@
 ﻿using NUnit.Framework;
 
-namespace EloquaClient.Tests.Clients.Data
+namespace Eloqua.Api.Rest.Client.Tests.Clients.Data
 {
     [TestFixture]
     public class CustomObjectClientTests
     {
-        private Eloqua.Client _client;
+        private Client _client;
 
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Eloqua.Client("site", "user", "password");
+            _client = new Client("site", "user", "password");
         }
 
         [Test]

@@ -1,4 +1,4 @@
-﻿namespace Eloqua
+﻿namespace Eloqua.Api.Rest.Client
 {
     public interface IRestObject
     {
