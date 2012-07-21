@@ -4,35 +4,35 @@ namespace Eloqua.Api.Rest.Client
 {
     public class GenericClient<T> where T : RestObject, new()
     {
-        public GenericClient(BaseClient clientBase)
+        public GenericClient(BaseClient baseClient)
         {
-            _client = clientBase;
+            _baseClient = baseClient;
         }
-        readonly BaseClient _client;
+        readonly BaseClient _baseClient;
 
         public T Get(int id)
         {
-            return _client.Get<T> (id);
+            return _baseClient.Get<T> (id);
         }
 
         public RestObjectList<T> Get(string search, int pageNumber, int pageSize)
         {
-            return _client.Get<T> (search, pageNumber, pageSize);
+            return _baseClient.Get<T> (search, pageNumber, pageSize);
         }
 
         public T Post(T restObj)
         {
-            return _client.Post<T>(restObj);
+            return _baseClient.Post<T>(restObj);
         }
 
         public T Put(T restObj)
         {
-            return _client.Put<T>(restObj);
+            return _baseClient.Put<T>(restObj);
         }
 
         public void Delete(int id)
         {
-            _client.Delete<T> (id);
+            _baseClient.Delete<T> (id);
         }
     }
 }
