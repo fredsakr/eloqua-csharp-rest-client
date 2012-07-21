@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models
 {
-    public class RequestObjectList<T>
+    public class RestObjectList<T>
     {
         public List<T> elements { get; set; }
         public int total { get; set; }

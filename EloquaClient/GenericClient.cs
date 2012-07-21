@@ -15,7 +15,7 @@ namespace Eloqua.Api.Rest.Client
             return _client.Get<T> (id);
         }
 
-        public RequestObjectList<T> Get(string search, int pageNumber, int pageSize)
+        public RestObjectList<T> Get(string search, int pageNumber, int pageSize)
         {
             return _client.Get<T> (search, pageNumber, pageSize);
         }

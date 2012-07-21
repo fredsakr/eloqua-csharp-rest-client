@@ -48,11 +48,11 @@ namespace Eloqua.Api.Rest.Client
             return Execute<T>(request);
         }
 
-        public RequestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : RestObject, new()
+        public RestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : RestObject, new()
         {
             var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, items);
-            var result = Execute<RequestObjectList<T>>(request);
+            var result = Execute<RestObjectList<T>>(request);
             return result;
         }
 
