@@ -2,6 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Assets
 {
+    [Resource("/assets/email")]
     public class Email : RestObject
     {
         public string bouncebackEmail { get; set; }
@@ -18,10 +19,5 @@ namespace Eloqua.Api.Rest.Client.Models.Assets
         public string senderName { get; set; }
         public bool sendPlainTextOnly { get; set; }
         public string subject { get; set; }
-
-        public override string requestResource
-        {
-            get { return "/assets/email"; }
-        }
     }
 }

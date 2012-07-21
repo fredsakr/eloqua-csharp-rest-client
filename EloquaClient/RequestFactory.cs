@@ -26,25 +26,25 @@ namespace Eloqua.Api.Rest.Client
             {
                     case RequestType.Get:
                         request.Method = Method.GET;
-                        request.Resource = restObj.requestResource + "/" + restObj.id;
+                        request.Resource = restObj.Uri + "/" + restObj.id;
                         break;
                     case RequestType.Put:
                         request.Method = Method.PUT;
-                        request.Resource = restObj.requestResource + "/" + restObj.id;
+                        request.Resource = restObj.Uri + "/" + restObj.id;
                         break;
                     case RequestType.Post:
                         request.Method = Method.POST;
-                        request.Resource = restObj.requestResource;
+                        request.Resource = restObj.Uri;
                         break;
                     case RequestType.Search:
                         request.Method = Method.GET;
-                        request.Resource = restObj.requestResource + "s?search=" + restObj.searchTerm + "&count=" +
+                        request.Resource = restObj.Uri + "s?search=" + restObj.searchTerm + "&count=" +
                                            restObj.pageSize + "&page=" + restObj.page;
 
                         break;
                     case RequestType.Delete:
                         request.Method = Method.DELETE;
-                        request.Resource = restObj.requestResource + "/" + restObj.id;
+                        request.Resource = restObj.Uri + "/" + restObj.id;
                         break;
                     default:
                         throw new NotSupportedException(type.ToString());
@@ -52,5 +52,6 @@ namespace Eloqua.Api.Rest.Client
 
             return request;
         }
+
     }
 }
