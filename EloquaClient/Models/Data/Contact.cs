@@ -24,15 +24,15 @@ namespace Eloqua.Api.Rest.Client.Models.Data
         public int id { get; set; }
         public string name { get; set; }
 
-        public string RequestResource
+        public string requestResource
         {
             get { return "/data/contact"; }
         }
 
-        public string Depth { get; set; }
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
-        public string SearchTerm { get; set; }
+        public string depth { get; set; }
+        public int page { get; set; }
+        public int pageSize { get; set; }
+        public string searchTerm { get; set; }
 
         #endregion
 

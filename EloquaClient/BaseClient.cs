@@ -50,7 +50,7 @@ namespace Eloqua.Api.Rest.Client
 
         public RequestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : IRestObject, new()
         {
-            var items = new T { SearchTerm = searchTerm, PageNumber = pageNumber, PageSize = pageSize };
+            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, items);
             var result = Execute<RequestObjectList<T>>(request);
             return result;

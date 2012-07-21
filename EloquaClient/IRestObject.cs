@@ -4,11 +4,12 @@
     {
         int id { get; set; }
         string name { get; set; }
-        string RequestResource { get; }
 
-        string Depth { get; set; }
-        int PageNumber { get; set; }
-        int PageSize { get; set; }
-        string SearchTerm { get; set; }
+        string depth { get; set; }
+        string requestResource { get; }
+
+        int page { get; set; }
+        int pageSize { get; set; }
+        string searchTerm { get; set; }
     }
 }
