@@ -3,13 +3,13 @@ using RestSharp;
 
 namespace Eloqua.Api.Rest.Client
 {
-    public class ClientBase
+    public class BaseClient
     {
         #region constructors
 
-        protected ClientBase() { }
+        protected BaseClient() {}
 
-        public ClientBase(string site, string user, string password)
+        public BaseClient(string site, string user, string password)
         {
             Client = new RestClient
             {

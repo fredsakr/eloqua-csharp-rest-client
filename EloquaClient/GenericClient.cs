@@ -4,11 +4,11 @@ namespace Eloqua.Api.Rest.Client
 {
     public class GenericClient<T> where T : IRestObject, new()
     {
-        public GenericClient(ClientBase clientBase)
+        public GenericClient(BaseClient clientBase)
         {
             _client = clientBase;
         }
-        readonly ClientBase _client;
+        readonly BaseClient _client;
 
         public T Get(int id)
         {
