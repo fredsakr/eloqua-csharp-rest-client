@@ -7,11 +7,11 @@ namespace Eloqua.Api.Rest.Client
     {
         #region constructor
 
-        protected ClientBase GenericRequest;
+        protected ClientBase ClientBase;
 
         public Client(string site, string user, string password)
         {
-            GenericRequest = new ClientBase(site, user, password);
+            ClientBase = new ClientBase(site, user, password);
         }
 
         #endregion
@@ -21,13 +21,13 @@ namespace Eloqua.Api.Rest.Client
 
         public GenericClient<Email> Email
         {
-            get { return _emailClient ?? (_emailClient = new GenericClient<Email>(GenericRequest)); }
+            get { return _emailClient ?? (_emailClient = new GenericClient<Email>(ClientBase)); }
         }
         private GenericClient<Email> _emailClient;
 
         public GenericClient<LandingPage> LandingPage
         {
-            get { return _landingPage ?? (_landingPage = new GenericClient<LandingPage>(GenericRequest)); }
+            get { return _landingPage ?? (_landingPage = new GenericClient<LandingPage>(ClientBase)); }
         }
         private GenericClient<LandingPage> _landingPage;
 
@@ -38,19 +38,19 @@ namespace Eloqua.Api.Rest.Client
 
         public GenericClient<Contact> Contact
         {
-            get { return _contactClient ?? (_contactClient = new GenericClient<Contact>(GenericRequest)); }
+            get { return _contactClient ?? (_contactClient = new GenericClient<Contact>(ClientBase)); }
         }
         private GenericClient<Contact> _contactClient;
 
         public GenericClient<ContactSegment> ContactSegment
         {
-            get { return _contactSegment ?? (_contactSegment = new GenericClient<ContactSegment>(GenericRequest)); }
+            get { return _contactSegment ?? (_contactSegment = new GenericClient<ContactSegment>(ClientBase)); }
         }
         private GenericClient<ContactSegment> _contactSegment;
 
         public GenericClient<ContactList> ContactList
         {
-            get { return _contactList ?? (_contactList = new GenericClient<ContactList>(GenericRequest)); }
+            get { return _contactList ?? (_contactList = new GenericClient<ContactList>(ClientBase)); }
         }
         private GenericClient<ContactList> _contactList;
 
@@ -61,7 +61,7 @@ namespace Eloqua.Api.Rest.Client
 
         public GenericClient<CustomObject> CustomObject
         {
-            get { return _customObjectClient ?? (_customObjectClient = new GenericClient<CustomObject>(GenericRequest)); }
+            get { return _customObjectClient ?? (_customObjectClient = new GenericClient<CustomObject>(ClientBase)); }
         }
         private GenericClient<CustomObject> _customObjectClient;
 
