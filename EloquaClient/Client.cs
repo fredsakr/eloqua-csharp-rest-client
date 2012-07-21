@@ -3,15 +3,15 @@ using Eloqua.Api.Rest.Client.Models.Data;
 
 namespace Eloqua.Api.Rest.Client
 {
-    public class Client
+    public class Client : ClientBase
     {
         #region constructor
 
-        protected GenericRequest GenericRequest;
+        protected ClientBase GenericRequest;
 
         public Client(string site, string user, string password)
         {
-            GenericRequest = new GenericRequest(site, user, password);
+            GenericRequest = new ClientBase(site, user, password);
         }
 
         #endregion

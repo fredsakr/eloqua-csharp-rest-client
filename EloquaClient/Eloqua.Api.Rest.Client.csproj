@@ -49,7 +49,7 @@
     <Compile Include="Models\Assets\ContactList.cs" />
     <Compile Include="Models\Assets\Email.cs" />
     <Compile Include="Authenticator.cs" />
-    <Compile Include="GenericRequest.cs" />
+    <Compile Include="ClientBase.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="IRestObject.cs" />
     <Compile Include="Models\Assets\LandingPage.cs" />
