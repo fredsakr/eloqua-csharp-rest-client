@@ -14,7 +14,7 @@ namespace Eloqua.Api.Rest.Client
             Search // todo : move this under the GET method
         }
 
-        internal static RestRequest GetRequest(RequestType type, IRestObject restObj)
+        internal static RestRequest GetRequest(RequestType type, RestObject restObj)
         {
             var request = new RestRequest
                               {

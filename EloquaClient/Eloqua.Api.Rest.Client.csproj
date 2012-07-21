@@ -51,7 +51,7 @@
     <Compile Include="Authenticator.cs" />
     <Compile Include="BaseClient.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="IRestObject.cs" />
+    <Compile Include="RestObject.cs" />
     <Compile Include="Models\Assets\LandingPage.cs" />
     <Compile Include="Models\Assets\ContactSegment.cs" />
     <Compile Include="Models\Content\HtmlContent.cs" />

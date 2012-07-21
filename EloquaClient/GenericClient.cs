@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client
 {
-    public class GenericClient<T> where T : IRestObject, new()
+    public class GenericClient<T> where T : RestObject, new()
     {
         public GenericClient(BaseClient clientBase)
         {

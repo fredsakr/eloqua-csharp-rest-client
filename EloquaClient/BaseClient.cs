@@ -41,14 +41,14 @@ namespace Eloqua.Api.Rest.Client
             return response.Data;
         }
 
-        public T Get<T>(int id) where T : IRestObject, new()
+        public T Get<T>(int id) where T : RestObject, new()
         {
             var item = new T { id = id };
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, item);
             return Execute<T>(request);
         }
 
-        public RequestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : IRestObject, new()
+        public RequestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : RestObject, new()
         {
             var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, items);
@@ -56,21 +56,21 @@ namespace Eloqua.Api.Rest.Client
             return result;
         }
 
-        public void Delete<T>(int id) where T : IRestObject, new()
+        public void Delete<T>(int id) where T : RestObject, new()
         {
             var item = new T { id = id };
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Delete, item);
             Execute<T>(request);
         }
 
-        public T Post<T>(T restObj) where T : IRestObject, new()
+        public T Post<T>(T restObj) where T : RestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Post, restObj);
             request.AddBody(restObj);
             return Execute<T>(request);
         }
 
-        public T Put<T>(T restObj) where T : IRestObject, new()
+        public T Put<T>(T restObj) where T : RestObject, new()
         {
             var request = RequestFactory.GetRequest(RequestFactory.RequestType.Put, restObj);
             request.AddBody(restObj);

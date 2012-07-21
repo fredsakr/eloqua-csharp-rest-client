@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Assets
 {
-    public class Email : IRestObject
+    public class Email : RestObject
     {
         public string bouncebackEmail { get; set; }
         public int? emailFooterId { get; set; }
@@ -19,21 +19,9 @@ namespace Eloqua.Api.Rest.Client.Models.Assets
         public bool sendPlainTextOnly { get; set; }
         public string subject { get; set; }
 
-        #region IRestObject
-
-        public int id { get; set; }
-        public string name { get; set; }
-
-        public string requestResource
+        public override string requestResource
         {
             get { return "/assets/email"; }
         }
-
-        public string depth { get; set; }
-        public int page { get; set; }
-        public int pageSize { get; set; }
-        public string searchTerm { get; set; }
-
-        #endregion
     }
 }
