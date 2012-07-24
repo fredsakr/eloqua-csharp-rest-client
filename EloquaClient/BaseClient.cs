@@ -1,5 +1,6 @@
 ﻿using Eloqua.Api.Rest.Client.Models;
 using RestSharp;
+using RestSharp.Serializers;
 
 namespace Eloqua.Api.Rest.Client
 {

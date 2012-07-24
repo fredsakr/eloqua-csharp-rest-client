@@ -7,6 +7,7 @@ namespace Eloqua.Api.Rest.Client
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string type { get; set; }
 
         public string depth { get; set; }
 

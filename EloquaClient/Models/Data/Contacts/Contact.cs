@@ -20,5 +20,7 @@ namespace Eloqua.Api.Rest.Client.Models.Data.Contacts
         public string salesPerson { get; set; }
         public string title { get; set; }
         public List<FieldValue> fieldValues { get; set; }
+
+        public new string name { get { return emailAddress; } }
     }
 }

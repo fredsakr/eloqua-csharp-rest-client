@@ -1,5 +1,6 @@
 ﻿using System;
 using RestSharp;
+using RestSharp.Serializers;
 
 namespace Eloqua.Api.Rest.Client
 {
@@ -18,6 +19,7 @@ namespace Eloqua.Api.Rest.Client
         {
             var request = new RestRequest
                               {
+                                  JsonSerializer = new JsonSerializer(),
                                   RequestFormat = DataFormat.Json,
                                   RootElement = restObj.GetType().ToString()
                               };
