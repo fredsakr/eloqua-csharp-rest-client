@@ -1,5 +1,5 @@
 ﻿using System;
-using Eloqua.Api.Rest.Client.Models.Assets;
+using Eloqua.Api.Rest.Client.Models.Assets.Emails;
 using NUnit.Framework;
 
 namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
