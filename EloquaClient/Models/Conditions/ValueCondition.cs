@@ -1,6 +1,4 @@
 ﻿namespace Eloqua.Api.Rest.Client.Models.Conditions
 {
-    public class ValueCondition : Condition
-    {
-    }
+    public class ValueCondition : Condition {}
 }

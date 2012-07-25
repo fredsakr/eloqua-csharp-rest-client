@@ -85,6 +85,5 @@ namespace Eloqua.Api.Rest.Client.Clients
         private GenericClient<Models.Assets.CustomObjects.CustomObject> _customObjectClient;
 
         #endregion
-
     }
 }

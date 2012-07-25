@@ -20,7 +20,6 @@
             }
             set { _type = value; }
         }
-
         private string _type;
     }
 }

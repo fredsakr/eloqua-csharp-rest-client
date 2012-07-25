@@ -1,5 +1,5 @@
-﻿using Eloqua.Api.Rest.Client.Models;
-using RestSharp;
+﻿using RestSharp;
+using Eloqua.Api.Rest.Client.Models;
 
 namespace Eloqua.Api.Rest.Client
 {

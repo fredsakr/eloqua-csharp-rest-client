@@ -6,12 +6,16 @@ namespace Eloqua.Api.Rest.Client
     {
         #region constructor
 
-        protected BaseClient BaseClient;
-
         public Client(string site, string user, string password)
         {
             BaseClient = new BaseClient(site, user, password);
         }
+
+        #endregion
+
+        #region properties
+
+        protected BaseClient BaseClient;
 
         #endregion
 
@@ -32,6 +36,5 @@ namespace Eloqua.Api.Rest.Client
         }
 
         #endregion
-
     }
 }

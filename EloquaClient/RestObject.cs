@@ -42,6 +42,5 @@ namespace Eloqua.Api.Rest.Client
             }
         }
         private string _type;
-
     }
 }

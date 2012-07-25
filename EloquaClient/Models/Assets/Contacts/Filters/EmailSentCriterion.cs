@@ -2,7 +2,5 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Assets.Contacts.Filters
 {
-    public class EmailSentCriterion : ActivityCriterion
-    {
-    }
+    public class EmailSentCriterion : ActivityCriterion {}
 }
