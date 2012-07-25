@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Assets.Contacts.Lists
 {
-    [Resource("/assets/contact/list")]
+    [Resource("/assets/contact/list", "ContactList")]
     public class ContactList : RestObject
     {
         public int? count { get; set; }

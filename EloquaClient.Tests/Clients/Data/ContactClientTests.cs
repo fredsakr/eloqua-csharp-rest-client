@@ -38,8 +38,7 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Data
                                       id = -500002,
                                       firstName = "sample",
                                       lastName = "test",
-                                      emailAddress = "sample@test.com",
-                                      type = "Contact"
+                                      emailAddress = "sample@test.com"
                                   };
 
             Contact returnedContact = _client.Contact.Post(contact);

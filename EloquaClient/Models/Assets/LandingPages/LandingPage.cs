@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Assets.LandingPages
 {
-    [Resource("/assets/landingPage")]
+    [Resource("/assets/landingPage", "LandingPage")]
     public class LandingPage : RestObject
     {
         public int? createdAt { get; set; }

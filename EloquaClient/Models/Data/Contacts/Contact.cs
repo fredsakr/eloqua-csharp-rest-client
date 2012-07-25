@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Data.Contacts
 {
-    [Resource("/data/contact")]
+    [Resource("/data/contact", "Contact")]
     public class Contact : RestObject
     {
         public string accountName { get; set; }
@@ -21,6 +21,6 @@ namespace Eloqua.Api.Rest.Client.Models.Data.Contacts
         public string title { get; set; }
         public List<FieldValue> fieldValues { get; set; }
 
-        public new string name { get { return emailAddress; } }
+        public new string name { get { return emailAddress; } } // TODO : add attribute to ignore these properties
     }
 }
