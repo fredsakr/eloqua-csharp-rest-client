@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericClient.cs" />
+    <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
     <Compile Include="Models\Assets\Contacts\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\ContactFilter.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\Criteria\ActivityCriterion.cs" />

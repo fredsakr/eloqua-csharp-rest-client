@@ -1,4 +1,5 @@
-﻿using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Lists;
+﻿using Eloqua.Api.Rest.Client.Models.Assets.Accounts.Views;
+using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Lists;
 using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Segments;
 using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Views;
 using Eloqua.Api.Rest.Client.Models.Assets.Emails;
@@ -73,6 +74,12 @@ namespace Eloqua.Api.Rest.Client
             get { return _accountClient ?? (_accountClient = new GenericClient<Account>(BaseClient)); }
         }
         private GenericClient<Account> _accountClient;
+
+        public GenericClient<AccountView> AccountView
+        {
+            get { return _accountView ?? (_accountView = new GenericClient<AccountView>(BaseClient)); }
+        }
+        private GenericClient<AccountView> _accountView;
 
         #endregion
 
