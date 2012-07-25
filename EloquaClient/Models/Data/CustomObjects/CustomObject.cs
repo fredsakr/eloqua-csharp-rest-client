@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.Client.Models.Data.CustomObjects
 {
-    [Resource("/assets/customObject", "CustomObject")]
+    [Resource("/data/customObject", "CustomObject")]
     public class CustomObject : RestObject
     {
         public int? contactId { get; set; }

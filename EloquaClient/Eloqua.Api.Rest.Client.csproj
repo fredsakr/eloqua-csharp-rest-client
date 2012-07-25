@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\AssetClient.cs" />
+    <Compile Include="Clients\DataClient.cs" />
     <Compile Include="GenericClient.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
     <Compile Include="Models\Assets\Contacts\ContactField.cs" />
@@ -57,6 +59,8 @@
     <Compile Include="Models\Assets\Contacts\Segments\ContactFilterSegmentElement.cs" />
     <Compile Include="Models\Assets\Contacts\Segments\SegmentElement.cs" />
     <Compile Include="Models\Assets\Contacts\Views\ContactView.cs" />
+    <Compile Include="Models\Assets\CustomObjects\CustomObject.cs" />
+    <Compile Include="Models\Assets\CustomObjects\CustomObjectField.cs" />
     <Compile Include="Models\Assets\DataField.cs" />
     <Compile Include="Models\Assets\DataView.cs" />
     <Compile Include="Models\Assets\Emails\Email.cs" />
@@ -64,6 +68,8 @@
     <Compile Include="BaseClient.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Models\Data\Account\Account.cs" />
+    <Compile Include="Models\FieldDataType.cs" />
+    <Compile Include="Models\FieldDisplayType.cs" />
     <Compile Include="RestObject.cs" />
     <Compile Include="Models\Conditions\Condition.cs" />
     <Compile Include="Models\Conditions\ConditionOperator.cs" />

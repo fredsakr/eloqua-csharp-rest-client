@@ -19,7 +19,7 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
         public void GetEmailTest()
         {
             const int originalId = 8;
-            var email = _client.Email.Get(originalId);
+            var email = _client.Assets.Email.Get(originalId);
 
             Assert.AreEqual(originalId, email.id);
         }
@@ -27,7 +27,7 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
         [Test]
         public void GetEmailListTest()
         {
-            var result = _client.Email.Get("*", 1, 1);
+            var result = _client.Assets.Email.Get("*", 1, 1);
             Assert.AreEqual(1, result.elements.Count);
         }
 
@@ -44,14 +44,14 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
                                             name = string.Format("test-{0}", Guid.NewGuid())
                                         };
 
-                email = _client.Email.Post(expectedEmail);
+                email = _client.Assets.Email.Post(expectedEmail);
                 Assert.AreEqual(expectedEmail.name, email.name);
             }
             finally
             {
                 if (email != null && email.id > 0)
                 {
-                    _client.Email.Delete(email.id);
+                    _client.Assets.Email.Delete(email.id);
                 }
             }
         }
@@ -69,12 +69,12 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
                                             name = string.Format("test-{0}", Guid.NewGuid())
                                         };
 
-                email = _client.Email.Post(expectedEmail);
+                email = _client.Assets.Email.Post(expectedEmail);
                 Assert.AreEqual(expectedEmail.name, email.name);
 
                 string updatedName = string.Format("test-{0}", Guid.NewGuid());
                 email.name = updatedName;
-                email = _client.Email.Put(email);
+                email = _client.Assets.Email.Put(email);
 
                 Assert.AreEqual(updatedName, email.name);
             }
@@ -82,7 +82,7 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
             {
                 if (email != null && email.id > 0)
                 {
-                    _client.Email.Delete(email.id);
+                    _client.Assets.Email.Delete(email.id);
                 }
             }
         }
@@ -97,10 +97,10 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
                                 emailGroupId = 1
                             };
 
-            email = _client.Email.Post(email);
-            _client.Email.Delete(email.id);
+            email = _client.Assets.Email.Post(email);
+            _client.Assets.Email.Delete(email.id);
 
-            var result = _client.Email.Get(emailName, 1, 1);
+            var result = _client.Assets.Email.Get(emailName, 1, 1);
             Assert.AreEqual(0, result.elements.Count);
         }
     }

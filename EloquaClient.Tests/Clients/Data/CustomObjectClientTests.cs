@@ -17,7 +17,7 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Data
         public void GetCustomObjectTest()
         {
             const int originalId = 1;
-            var customObject = _client.CustomObject.Get(originalId);
+            var customObject = _client.Data.CustomObject.Get(originalId);
 
             Assert.AreEqual(originalId, customObject.id);
         }
@@ -25,7 +25,7 @@ namespace Eloqua.Api.Rest.Client.Tests.Clients.Data
         [Test]
         public void SearchCustomObjectTest()
         {
-            var result = _client.CustomObject.Get("*", 1, 1);
+            var result = _client.Data.CustomObject.Get("*", 1, 1);
             Assert.AreEqual(1, result.elements.Count);
         }
     }
