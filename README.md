@@ -6,7 +6,7 @@ Eloqua C# Rest Client
 ## Usage
 
 ### Create Client
-var client = new Eloqua.Client("site", "user", "pass");
+var client = new Eloqua.Api.Rest.Client("site", "user", "pass");
 
 ### GET (item)
 int emailId = 1;
@@ -14,7 +14,7 @@ int emailId = 1;
 Email email = client.Email.Get(emailId);
 
 ### GET (list)
-List&lt;Email&gt; emails = client.Email.Get("searchTerm", pageNumber, pageSize);
+List&lt;RestObjectList&lt;Email&gt;&gt; emails = client.Email.Get("searchTerm", pageNumber, pageSize);
 
 ### POST
 Email email = new Email() { ... };
