@@ -30,6 +30,11 @@ namespace Eloqua.Api.Rest.Client
 
         #region methods
 
+        internal IRestResponse Execute(IRestRequest request)
+        {
+            return Client.Execute(request);
+        }
+
         private T Execute<T>(IRestRequest request) where T : new()
         {
             IRestResponse<T> response = Client.Execute<T>(request);

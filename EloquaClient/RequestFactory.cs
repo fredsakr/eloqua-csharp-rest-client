@@ -41,7 +41,7 @@ namespace Eloqua.Api.Rest.Client
                     case RequestType.Search:
                         request.Method = Method.GET;
                         request.Resource = restObj.Uri + "s?search=" + restObj.searchTerm + "&count=" +
-                                           restObj.pageSize + "&page=" + restObj.page;
+                                           restObj.pageSize + "&page=" + restObj.page + "&depth=complete";
 
                         break;
                     case RequestType.Delete:
