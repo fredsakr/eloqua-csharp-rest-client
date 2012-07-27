@@ -67,6 +67,7 @@
     <Compile Include="Authenticator.cs" />
     <Compile Include="BaseClient.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="Models\Assets\Microsites\Microsite.cs" />
     <Compile Include="Models\Data\Account\Account.cs" />
     <Compile Include="Models\FieldDataType.cs" />
     <Compile Include="Models\FieldDisplayType.cs" />

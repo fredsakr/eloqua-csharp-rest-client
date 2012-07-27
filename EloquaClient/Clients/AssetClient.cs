@@ -85,5 +85,15 @@ namespace Eloqua.Api.Rest.Client.Clients
         private GenericClient<Models.Assets.CustomObjects.CustomObject> _customObjectClient;
 
         #endregion
+
+        #region Microsites
+
+        public GenericClient<Models.Assets.Microsites.Microsite> Microsite
+        {
+            get { return _micrositeClient ?? (_micrositeClient = new GenericClient<Models.Assets.Microsites.Microsite>(BaseClient)); }
+        }
+        private GenericClient<Models.Assets.Microsites.Microsite> _micrositeClient;
+
+        #endregion
     }
 }

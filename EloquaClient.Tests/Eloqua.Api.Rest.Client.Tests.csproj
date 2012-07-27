@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Clients\Assets\CustomObjectTests.cs" />
     <Compile Include="Clients\Assets\EmailClientTests.cs" />
+    <Compile Include="Clients\Assets\MicrositeClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />
     <Compile Include="Clients\Data\CustomObjectClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
