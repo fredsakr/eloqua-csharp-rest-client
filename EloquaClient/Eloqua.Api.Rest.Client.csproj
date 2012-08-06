@@ -68,6 +68,8 @@
     <Compile Include="BaseClient.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Models\Assets\Microsites\Microsite.cs" />
+    <Compile Include="Models\Assets\OptionLists\Option.cs" />
+    <Compile Include="Models\Assets\OptionLists\OptionList.cs" />
     <Compile Include="Models\Data\Account\Account.cs" />
     <Compile Include="Models\FieldDataType.cs" />
     <Compile Include="Models\FieldDisplayType.cs" />

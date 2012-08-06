@@ -4,6 +4,7 @@ using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Segments;
 using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Views;
 using Eloqua.Api.Rest.Client.Models.Assets.Emails;
 using Eloqua.Api.Rest.Client.Models.Assets.LandingPages;
+using Eloqua.Api.Rest.Client.Models.Assets.OptionLists;
 
 namespace Eloqua.Api.Rest.Client.Clients
 {
@@ -93,6 +94,16 @@ namespace Eloqua.Api.Rest.Client.Clients
             get { return _micrositeClient ?? (_micrositeClient = new GenericClient<Models.Assets.Microsites.Microsite>(BaseClient)); }
         }
         private GenericClient<Models.Assets.Microsites.Microsite> _micrositeClient;
+
+        #endregion
+
+        #region OptionLists
+
+        public GenericClient<OptionList> OptionList
+        {
+            get { return _optionList ?? (_optionList = new GenericClient<OptionList>(BaseClient)); }
+        }
+        private GenericClient<OptionList> _optionList;
 
         #endregion
     }
