@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Api.Rest.ClientLibrary;
 
-namespace Eloqua.Api.Rest.Client.Models.Assets.Contacts.Lists
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Lists
 {
     [Resource("/assets/contact/list", "ContactList")]
     public class ContactList : RestObject

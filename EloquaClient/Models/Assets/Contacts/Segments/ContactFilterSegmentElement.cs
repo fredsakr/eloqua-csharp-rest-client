@@ -1,7 +1,9 @@
-﻿namespace Eloqua.Api.Rest.Client.Models.Assets.Contacts.Segments
+﻿using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Filters;
+
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Segments
 {
     public class ContactFilterSegmentElement : SegmentElement
     {
-        public Filters.ContactFilter filter { get; set; }
+        public ContactFilter filter { get; set; }
     }
 }

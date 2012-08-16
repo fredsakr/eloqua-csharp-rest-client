@@ -1,4 +1,6 @@
-﻿namespace Eloqua.Api.Rest.Client.Models.Data.Account
+﻿using Eloqua.Api.Rest.ClientLibrary;
+
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Data.Account
 {
     [Resource("/data/account", "Account")]
     public class Account : RestObject

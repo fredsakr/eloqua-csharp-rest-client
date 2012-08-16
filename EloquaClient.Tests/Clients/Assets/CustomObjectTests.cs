@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
+namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
 {
     [TestFixture]
     public class CustomObjectTests

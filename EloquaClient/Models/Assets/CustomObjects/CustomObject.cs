@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Api.Rest.ClientLibrary;
 
-namespace Eloqua.Api.Rest.Client.Models.Assets.CustomObjects
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.CustomObjects
 {
     [Resource("/assets/customObject", "CustomObject")]
     public class CustomObject : RestObject

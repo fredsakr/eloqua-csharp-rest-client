@@ -1,7 +1,7 @@
 ﻿using System;
 using RestSharp;
 
-namespace Eloqua.Api.Rest.Client
+namespace Eloqua.Api.Rest.ClientLibrary
 {
     internal class RequestFactory
     {

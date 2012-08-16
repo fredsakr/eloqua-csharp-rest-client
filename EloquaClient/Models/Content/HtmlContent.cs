@@ -1,4 +1,4 @@
-﻿namespace Eloqua.Api.Rest.Client.Models.Content
+﻿namespace Eloqua.Api.Rest.ClientLibrary.Models.Content
 {
     public abstract class HtmlContent {}
 }

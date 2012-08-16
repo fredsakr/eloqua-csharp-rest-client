@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Eloqua.Api.Rest.Client
+namespace Eloqua.Api.Rest.ClientLibrary
 {
     public class RestObject
     {
@@ -8,7 +8,6 @@ namespace Eloqua.Api.Rest.Client
         public string name { get; set; }
 
         public string type;
-
         public string depth { get; set; }
 
         public int page { get; set; }

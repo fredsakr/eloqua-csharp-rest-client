@@ -1,6 +1,6 @@
-﻿using Eloqua.Api.Rest.Client.Models.Assets.Contacts.Filters.Criteria;
+﻿using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Filters.Criteria;
 
-namespace Eloqua.Api.Rest.Client.Models.Assets.Contacts.Filters
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Filters
 {
     public class EmailSentCriterion : ActivityCriterion {}
 }

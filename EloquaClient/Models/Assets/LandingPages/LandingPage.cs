@@ -1,6 +1,7 @@
-﻿using Eloqua.Api.Rest.Client.Models.Content;
+﻿using Eloqua.Api.Rest.ClientLibrary;
+using Eloqua.Api.Rest.ClientLibrary.Models.Content;
 
-namespace Eloqua.Api.Rest.Client.Models.Assets.LandingPages
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.LandingPages
 {
     [Resource("/assets/landingPage", "LandingPage")]
     public class LandingPage : RestObject

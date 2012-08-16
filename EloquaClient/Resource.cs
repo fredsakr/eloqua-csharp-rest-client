@@ -1,4 +1,4 @@
-﻿namespace Eloqua.Api.Rest.Client
+﻿namespace Eloqua.Api.Rest.ClientLibrary
 {
     [System.AttributeUsage(System.AttributeTargets.Class)]
     public class Resource : System.Attribute

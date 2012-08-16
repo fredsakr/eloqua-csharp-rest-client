@@ -1,8 +1,10 @@
-﻿namespace Eloqua.Api.Rest.Client.Models.Assets.Contacts.Filters.Criteria
+﻿using Eloqua.Api.Rest.ClientLibrary.Models.Conditions;
+
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Filters.Criteria
 {
     public class ActivityCriterion : Criterion
     {
-        public Conditions.Condition activityRestriction { get; set; }
-        public Conditions.Condition timeRestriction { get; set; }
+        public Condition activityRestriction { get; set; }
+        public Condition timeRestriction { get; set; }
     }
 }

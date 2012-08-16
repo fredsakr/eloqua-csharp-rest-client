@@ -1,4 +1,4 @@
-﻿namespace Eloqua.Api.Rest.Client.Models.Conditions
+﻿namespace Eloqua.Api.Rest.ClientLibrary.Models.Conditions
 {
     public class ValueCondition : Condition {}
 }

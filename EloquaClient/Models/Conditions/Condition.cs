@@ -1,4 +1,6 @@
-﻿namespace Eloqua.Api.Rest.Client.Models.Conditions
+﻿using Eloqua.Api.Rest.ClientLibrary.Models;
+
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Conditions
 {
     public class Condition : IdentifiableObject {}
 }

@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using Eloqua.Api.Rest.Client.Models.Data.Contacts;
+using Eloqua.Api.Rest.ClientLibrary.Models.Data.Contacts;
 
-namespace Eloqua.Api.Rest.Client.Tests.Clients.Data
+namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Data
 {
     [TestFixture]
     public class ContactClientTests

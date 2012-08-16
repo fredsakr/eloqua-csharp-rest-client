@@ -1,7 +1,8 @@
-﻿using RestSharp;
-using Eloqua.Api.Rest.Client.Models;
+﻿using Eloqua.Api.Rest.ClientLibrary;
+using RestSharp;
+using Eloqua.Api.Rest.ClientLibrary.Models;
 
-namespace Eloqua.Api.Rest.Client
+namespace Eloqua.Api.Rest.ClientLibrary
 {
     public class BaseClient
     {
@@ -35,7 +36,7 @@ namespace Eloqua.Api.Rest.Client
             return Client.Execute(request);
         }
 
-        private T Execute<T>(IRestRequest request) where T : new()
+        internal T Execute<T>(IRestRequest request) where T : new()
         {
             IRestResponse<T> response = Client.Execute<T>(request);
 

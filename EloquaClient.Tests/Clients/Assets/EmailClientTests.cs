@@ -1,8 +1,8 @@
 ﻿using System;
-using Eloqua.Api.Rest.Client.Models.Assets.Emails;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails;
 using NUnit.Framework;
 
-namespace Eloqua.Api.Rest.Client.Tests.Clients.Assets
+namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
 {
     [TestFixture]
     public class EmailClientTests

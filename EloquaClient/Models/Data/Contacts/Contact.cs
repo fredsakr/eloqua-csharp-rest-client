@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Api.Rest.ClientLibrary;
 
-namespace Eloqua.Api.Rest.Client.Models.Data.Contacts
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Data.Contacts
 {
     [Resource("/data/contact", "Contact")]
     public class Contact : RestObject

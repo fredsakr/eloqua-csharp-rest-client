@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Api.Rest.ClientLibrary.Models;
 
-namespace Eloqua.Api.Rest.Client.Models.Assets
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets
 {
     public class DataView : IdentifiableObject
     {

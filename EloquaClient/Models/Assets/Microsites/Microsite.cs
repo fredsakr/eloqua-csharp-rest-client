@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Eloqua.Api.Rest.ClientLibrary;
 
-namespace Eloqua.Api.Rest.Client.Models.Assets.Microsites
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Microsites
 {
     [Resource("/assets/microsite", "Microsite")]
     public class Microsite : RestObject

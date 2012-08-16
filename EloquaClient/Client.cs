@@ -1,6 +1,7 @@
-﻿using Eloqua.Api.Rest.Client.Clients;
+﻿using Eloqua.Api.Rest.ClientLibrary.Clients.Assets;
+using Eloqua.Api.Rest.ClientLibrary.Clients.Data;
 
-namespace Eloqua.Api.Rest.Client
+namespace Eloqua.Api.Rest.ClientLibrary
 {
     public class Client : BaseClient
     {

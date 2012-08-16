@@ -8,8 +8,8 @@
     <ProjectGuid>{ED7D459B-29D8-4505-AD01-6DF6B76D9B2E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Eloqua.Api.Rest.Client</RootNamespace>
-    <AssemblyName>Eloqua.Api.Rest.Client</AssemblyName>
+    <RootNamespace>Eloqua.Api.Rest.ClientLibrary</RootNamespace>
+    <AssemblyName>Eloqua.Api.Rest.ClientLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,9 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clients\AssetClient.cs" />
-    <Compile Include="Clients\DataClient.cs" />
-    <Compile Include="GenericClient.cs" />
+    <Compile Include="Clients\Assets\AssetClient.cs" />
+    <Compile Include="Clients\Data\DataClient.cs" />
+    <Compile Include="Clients\GenericClient.cs" />
+    <Compile Include="Clients\ContactListMemberClient.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
     <Compile Include="Models\Assets\Contacts\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\ContactFilter.cs" />
