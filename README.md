@@ -6,7 +6,7 @@ Eloqua C# Rest Client
 ## Usage
 
 ### Create Client
-var client = new Eloqua.Client("site", "user", "pass");
+var client = new Eloqua.Api.Rest.ClientLibrary.Client("site", "user", "pass");
 
 ### GET (item)
 int emailId = 1;
