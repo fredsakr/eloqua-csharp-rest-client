@@ -47,7 +47,9 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\Assets\ContentSectionTests.cs" />
     <Compile Include="Clients\Assets\CustomObjectTests.cs" />
+    <Compile Include="Clients\Assets\DynamicContentTests.cs" />
     <Compile Include="Clients\Assets\EmailClientTests.cs" />
     <Compile Include="Clients\Assets\MicrositeClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />

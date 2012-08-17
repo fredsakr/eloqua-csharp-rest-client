@@ -3,6 +3,7 @@ using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Lists;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Segments;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Views;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.CustomObjects;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.LandingPages;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Microsites;
@@ -106,6 +107,22 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
             get { return _optionList ?? (_optionList = new GenericClient<OptionList>(BaseClient)); }
         }
         private GenericClient<OptionList> _optionList;
+
+        #endregion
+
+        #region Content 
+
+        public GenericClient<DynamicContent> DynamicContent
+        {
+            get { return _dynamicContent ?? (_dynamicContent = new GenericClient<DynamicContent>(BaseClient)); }
+        }
+        private GenericClient<DynamicContent> _dynamicContent;
+
+        public GenericClient<ContentSection> ContentSection
+        {
+            get { return _contentSection ?? (_contentSection = new GenericClient<ContentSection>(BaseClient)); }
+        }
+        private GenericClient<ContentSection> _contentSection;
 
         #endregion
     }
