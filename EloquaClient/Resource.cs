@@ -14,6 +14,5 @@
 
         public string Type { get { return _type; } }
         private readonly string _type;
-
     }
 }

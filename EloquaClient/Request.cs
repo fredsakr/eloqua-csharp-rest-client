@@ -3,9 +3,9 @@ using RestSharp;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
-    internal class RequestFactory
+    internal class Request
     {
-        internal enum RequestType
+        internal enum Type
         {
             Delete,
             Get,
@@ -14,7 +14,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             Search // todo : move this under the GET method
         }
 
-        internal static RestRequest GetRequest(RequestType type, RestObject restObj)
+        internal static RestRequest Get(Type type, RestObject restObj)
         {
             restObj.type = restObj.Type;
 
@@ -25,34 +25,25 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
             switch (type)
             {
-                    case RequestType.Get:
+                    case Type.Get:
                         request.Method = Method.GET;
-                        request.Resource = restObj.Uri + "/" + restObj.id;
                         break;
-                    case RequestType.Put:
+                    case Type.Put:
                         request.Method = Method.PUT;
-                        request.Resource = restObj.Uri + "/" + restObj.id;
                         break;
-                    case RequestType.Post:
+                    case Type.Post:
                         request.Method = Method.POST;
-                        request.Resource = restObj.Uri;
                         break;
-                    case RequestType.Search:
+                    case Type.Search:
                         request.Method = Method.GET;
-                        request.Resource = restObj.Uri + "s?search=" + restObj.searchTerm + "&count=" +
-                                           restObj.pageSize + "&page=" + restObj.page + "&depth=complete";
-
                         break;
-                    case RequestType.Delete:
+                    case Type.Delete:
                         request.Method = Method.DELETE;
-                        request.Resource = restObj.Uri + "/" + restObj.id;
                         break;
                     default:
                         throw new NotSupportedException(type.ToString());
             }
-
             return request;
         }
-
     }
 }

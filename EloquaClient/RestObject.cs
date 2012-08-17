@@ -2,17 +2,13 @@
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
-    public class RestObject
+    public class RestObject : IIdentifiable
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public string name { get; set; }
 
         public string type;
         public string depth { get; set; }
-
-        public int page { get; set; }
-        public int pageSize { get; set; }
-        public string searchTerm { get; set; }
 
         public string Uri
         {

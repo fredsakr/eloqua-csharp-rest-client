@@ -1,10 +1,9 @@
-﻿using Eloqua.Api.Rest.ClientLibrary;
-using Eloqua.Api.Rest.ClientLibrary.Models.Content;
+﻿using Eloqua.Api.Rest.ClientLibrary.Models.Content;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
 {
     [Resource("/assets/email", "Email")]
-    public class Email : RestObject
+    public class Email : RestObject, ISearchable
     {
         public string bouncebackEmail { get; set; }
         public int? emailFooterId { get; set; }
@@ -20,5 +19,13 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
         public string senderName { get; set; }
         public bool sendPlainTextOnly { get; set; }
         public string subject { get; set; }
+
+        #region ISearchable
+
+        public int page { get; set; }
+        public int pageSize { get; set; }
+        public string searchTerm { get; set; }
+
+        #endregion
     }
 }

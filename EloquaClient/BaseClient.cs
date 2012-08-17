@@ -1,5 +1,4 @@
-﻿using Eloqua.Api.Rest.ClientLibrary;
-using RestSharp;
+﻿using RestSharp;
 using Eloqua.Api.Rest.ClientLibrary.Models;
 
 namespace Eloqua.Api.Rest.ClientLibrary
@@ -29,14 +28,14 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         #endregion
 
-        #region methods
+        #region private methods
 
-        internal IRestResponse Execute(IRestRequest request)
+        private IRestResponse Execute(IRestRequest request)
         {
             return Client.Execute(request);
         }
 
-        internal T Execute<T>(IRestRequest request) where T : new()
+        private T Execute<T>(IRestRequest request) where T : new()
         {
             IRestResponse<T> response = Client.Execute<T>(request);
 
@@ -47,41 +46,64 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return response.Data;
         }
 
+        #endregion
+
+        #region public methods
+
         public T Get<T>(int id) where T : RestObject, new()
         {
             var item = new T { id = id };
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Get, item);
+            var request = Request.Get(Request.Type.Get, item);
+            request.Resource = item.Uri + "/" + item.id;
+
             return Execute<T>(request);
         }
 
-        public RestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : RestObject, new()
-        {
-            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Search, items);
-            var result = Execute<RestObjectList<T>>(request);
-            return result;
-        }
-
-        public void Delete<T>(int id) where T : RestObject, new()
+        public void Delete<T>(int? id) where T : RestObject, new()
         {
             var item = new T { id = id };
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Delete, item);
+            var request = Request.Get(Request.Type.Delete, item);
+            request.Resource = item.Uri + "/" + item.id;
             Execute<T>(request);
         }
 
         public T Post<T>(T restObj) where T : RestObject, new()
         {
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Post, restObj);
+            var request = Request.Get(Request.Type.Post, restObj);
+            request.Resource = restObj.Uri;
             request.AddBody(restObj);
             return Execute<T>(request);
         }
 
         public T Put<T>(T restObj) where T : RestObject, new()
         {
-            var request = RequestFactory.GetRequest(RequestFactory.RequestType.Put, restObj);
+            var request = Request.Get(Request.Type.Put, restObj);
+            request.Resource = restObj.Uri + "/" + restObj.id;
             request.AddBody(restObj);
             return Execute<T>(request);
         }
+
+        public RestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : RestObject, ISearchable, new()
+        {
+            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
+            var request = Request.Get(Request.Type.Search, items);
+            request.Resource = items.Uri + "s?search=" + items.searchTerm + "&count=" +
+                               items.pageSize + "&page=" + items.page + "&depth=complete";
+
+            var result = Execute<RestObjectList<T>>(request);
+            return result;
+        }
+
+        public RestObjectList<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize) where T : RestObject, ISearchable, new()
+        {
+            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
+            var request = Request.Get(Request.Type.Search, items);
+            request.Resource = items.Uri + "/" + id + "?search=" + items.searchTerm + "&count=" +
+                   items.pageSize + "&page=" + items.page + "&depth=complete";
+            var result = Execute<RestObjectList<T>>(request);
+            return result;
+        }
+
         #endregion
     }
 }

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using Eloqua.Api.Rest.ClientLibrary;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Models.Data.Contacts
 {
     [Resource("/data/contact", "Contact")]
-    public class Contact : RestObject
+    public class Contact : RestObject, ISearchable
     {
         public string accountName { get; set; }
         public string address1 { get; set; }
@@ -23,5 +22,13 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Data.Contacts
         public List<FieldValue> fieldValues { get; set; }
 
         public new string name { get { return emailAddress; } } // TODO : add attribute to ignore these properties
+
+        #region ISearchable
+
+        public int page { get; set; }
+        public int pageSize { get; set; }
+        public string searchTerm { get; set; }
+
+        #endregion
     }
 }

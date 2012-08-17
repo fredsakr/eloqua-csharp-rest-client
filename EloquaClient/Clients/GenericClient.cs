@@ -2,7 +2,7 @@
 
 namespace Eloqua.Api.Rest.ClientLibrary.Clients
 {
-    public class GenericClient<T> where T : RestObject, new()
+    public class GenericClient<T> where T : RestObject, ISearchable, new()
     {
         public GenericClient(BaseClient baseClient)
         {
@@ -20,6 +20,11 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients
             return _baseClient.Get<T> (search, pageNumber, pageSize);
         }
 
+        public RestObjectList<T> Get(int? id, string search, int pageNumber, int pageSize)
+        {
+            return _baseClient.Get<T>(id, search, pageNumber, pageSize);
+        }
+
         public T Post(T restObj)
         {
             return _baseClient.Post<T>(restObj);
@@ -27,10 +32,10 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients
 
         public T Put(T restObj)
         {
-            return _baseClient.Put<T>(restObj);
+            return _baseClient.Put(restObj);
         }
 
-        public void Delete(int id)
+        public void Delete(int? id)
         {
             _baseClient.Delete<T> (id);
         }

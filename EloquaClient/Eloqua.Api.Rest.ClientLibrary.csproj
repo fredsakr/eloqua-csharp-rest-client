@@ -49,7 +49,9 @@
     <Compile Include="Clients\Assets\AssetClient.cs" />
     <Compile Include="Clients\Data\DataClient.cs" />
     <Compile Include="Clients\GenericClient.cs" />
-    <Compile Include="Clients\ContactListMemberClient.cs" />
+    <Compile Include="Clients\SearchClient.cs" />
+    <Compile Include="IIdentifiable.cs" />
+    <Compile Include="ISearchable.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
     <Compile Include="Models\Assets\Contacts\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\ContactFilter.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Models\Assets\OptionLists\Option.cs" />
     <Compile Include="Models\Assets\OptionLists\OptionList.cs" />
     <Compile Include="Models\Data\Account\Account.cs" />
+    <Compile Include="Models\Data\Contacts\ContactListMember.cs" />
     <Compile Include="Models\FieldDataType.cs" />
     <Compile Include="Models\FieldDisplayType.cs" />
     <Compile Include="RestObject.cs" />
@@ -93,7 +96,7 @@
     <Compile Include="Models\FieldValue.cs" />
     <Compile Include="Models\RestObjectList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestFactory.cs" />
+    <Compile Include="Request.cs" />
     <Compile Include="Resource.cs" />
   </ItemGroup>
   <ItemGroup />
