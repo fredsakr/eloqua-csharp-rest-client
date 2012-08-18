@@ -50,7 +50,6 @@ namespace Eloqua.Api.Rest.ClientLibrary
         {
             var item = new T { id = id };
             var request = Request.Get(Request.Type.Get, item);
-
             return Execute<T>(request);
         }
 
@@ -77,7 +76,6 @@ namespace Eloqua.Api.Rest.ClientLibrary
         {
             var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
             var request = Request.Get(Request.Type.Search, items);
-
             return Execute<RestObjectList<T>>(request);
         }
 
