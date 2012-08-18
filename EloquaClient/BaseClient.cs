@@ -28,7 +28,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         #endregion
 
-        #region private methods
+        #region methods
 
         private IRestResponse Execute(IRestRequest request)
         {
@@ -46,15 +46,10 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return response.Data;
         }
 
-        #endregion
-
-        #region public methods
-
         public T Get<T>(int id) where T : RestObject, new()
         {
             var item = new T { id = id };
             var request = Request.Get(Request.Type.Get, item);
-            request.Resource = item.Uri + "/" + item.id;
 
             return Execute<T>(request);
         }
@@ -63,23 +58,18 @@ namespace Eloqua.Api.Rest.ClientLibrary
         {
             var item = new T { id = id };
             var request = Request.Get(Request.Type.Delete, item);
-            request.Resource = item.Uri + "/" + item.id;
             Execute<T>(request);
         }
 
         public T Post<T>(T restObj) where T : RestObject, new()
         {
             var request = Request.Get(Request.Type.Post, restObj);
-            request.Resource = restObj.Uri;
-            request.AddBody(restObj);
             return Execute<T>(request);
         }
 
         public T Put<T>(T restObj) where T : RestObject, new()
         {
             var request = Request.Get(Request.Type.Put, restObj);
-            request.Resource = restObj.Uri + "/" + restObj.id;
-            request.AddBody(restObj);
             return Execute<T>(request);
         }
 
@@ -87,21 +77,15 @@ namespace Eloqua.Api.Rest.ClientLibrary
         {
             var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
             var request = Request.Get(Request.Type.Search, items);
-            request.Resource = items.Uri + "s?search=" + items.searchTerm + "&count=" +
-                               items.pageSize + "&page=" + items.page + "&depth=complete";
 
-            var result = Execute<RestObjectList<T>>(request);
-            return result;
+            return Execute<RestObjectList<T>>(request);
         }
 
         public RestObjectList<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize) where T : RestObject, ISearchable, new()
         {
-            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
+            var items = new T { id = id, searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
             var request = Request.Get(Request.Type.Search, items);
-            request.Resource = items.Uri + "/" + id + "?search=" + items.searchTerm + "&count=" +
-                   items.pageSize + "&page=" + items.page + "&depth=complete";
-            var result = Execute<RestObjectList<T>>(request);
-            return result;
+            return Execute<RestObjectList<T>>(request);
         }
 
         #endregion
