@@ -14,21 +14,18 @@ Eloqua C# Rest Client
 	Email email = client.Assets.Email.Get(emailId);
 
 ### GET (list)
-	List&lt;Email&gt; emails = client.Assets.Email.Get("searchTerm", pageNumber, pageSize);
+	List<Email> emails = client.Assets.Email.Get("searchTerm", pageNumber, pageSize);
 
 ### POST
 	Email email = new Email() { ... };
-	
 	email = client.Assets.Email.Post(Email);
 
 ### PUT
-	Email email = new Email() { ... };
-	
+	Email email = new Email() { ... };	
 	email = client.Assets.Email.Put(Email);
 
 ### DELETE
-	int emailId = 1;
-	
+	int emailId = 1;	
 	client.Assets.Email.Delete(emailId);
 
 ## License
