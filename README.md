@@ -9,8 +9,7 @@ Eloqua C# Rest Client
 	var client = new Eloqua.Api.Rest.ClientLibrary.Client("site", "user", "pass");
 
 ### GET (item)
-	int emailId = 1;
-	
+	int emailId = 1;	
 	Email email = client.Assets.Email.Get(emailId);
 
 ### GET (list)
