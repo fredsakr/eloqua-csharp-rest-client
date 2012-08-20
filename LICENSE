@@ -1,39 +1,4 @@
-eloqua-csharp-rest-client
-=========================
-
-Eloqua C# Rest Client
-
-## Usage
-
-### Create Client
-var client = new Eloqua.Api.Rest.ClientLibrary.Client("site", "user", "pass");
-
-### GET (item)
-int emailId = 1;
-
-Email email = client.Assets.Email.Get(emailId);
-
-### GET (list)
-List&lt;Email&gt; emails = client.Assets.Email.Get("searchTerm", pageNumber, pageSize);
-
-### POST
-Email email = new Email() { ... };
-
-email = client.Assets.Email.Post(Email);
-
-### PUT
-Email email = new Email() { ... };
-
-email = client.Assets.Email.Put(Email);
-
-### DELETE
-int emailId = 1;
-
-client.Assets.Email.Delete(emailId);
-
-License
-=========================
-Copyright (C) 20120 Fred Sakr
+Copyright (C) 2012 Fred Sakr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
