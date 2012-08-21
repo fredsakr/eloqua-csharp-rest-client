@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clients\Assets\AssetClient.cs" />
+    <Compile Include="Clients\Data\ActivityClient.cs" />
     <Compile Include="Clients\Data\DataClient.cs" />
     <Compile Include="Clients\GenericClient.cs" />
     <Compile Include="Clients\SearchClient.cs" />
@@ -77,6 +78,10 @@
     <Compile Include="Models\Assets\OptionLists\Option.cs" />
     <Compile Include="Models\Assets\OptionLists\OptionList.cs" />
     <Compile Include="Models\Data\Account\Account.cs" />
+    <Compile Include="Models\Data\Activities\Activity.cs" />
+    <Compile Include="Models\Data\Activities\ActivityAssetType.cs" />
+    <Compile Include="Models\Data\Activities\ActivityList.cs" />
+    <Compile Include="Models\Data\Activities\ActivityType.cs" />
     <Compile Include="Models\Data\Contacts\ContactListMember.cs" />
     <Compile Include="Models\FieldDataType.cs" />
     <Compile Include="Models\FieldDisplayType.cs" />

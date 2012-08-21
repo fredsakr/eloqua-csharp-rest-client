@@ -36,6 +36,13 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
 
         private SearchClient<ContactListMember> _contactListMemberClient;
 
+        public ActivityClient Activity
+        {
+            get { return _activity ?? (_activity = new ActivityClient(BaseClient)); }
+        }
+
+        private ActivityClient _activity;
+
         #endregion
 
         #region Accounts

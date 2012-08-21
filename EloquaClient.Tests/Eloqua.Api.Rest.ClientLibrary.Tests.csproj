@@ -36,6 +36,7 @@
     <Reference Include="nunit.framework">
       <HintPath>..\References\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp, Version=102.7.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -52,6 +53,7 @@
     <Compile Include="Clients\Assets\DynamicContentTests.cs" />
     <Compile Include="Clients\Assets\EmailClientTests.cs" />
     <Compile Include="Clients\Assets\MicrositeClientTests.cs" />
+    <Compile Include="Clients\Data\ActivityClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />
     <Compile Include="Clients\Data\CustomObjectClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

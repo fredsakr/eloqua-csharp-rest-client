@@ -1,5 +1,6 @@
 ﻿using RestSharp;
 using Eloqua.Api.Rest.ClientLibrary.Models;
+using RestSharp.Deserializers;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
@@ -16,6 +17,8 @@ namespace Eloqua.Api.Rest.ClientLibrary
                 BaseUrl = BaseUrl,
                 Authenticator = new HttpBasicAuthenticator(site + "\\" + user, password)
             };
+
+            Client.AddHandler("text/plain", new JsonDeserializer());
         }
 
         #endregion
@@ -35,7 +38,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return Client.Execute(request);
         }
 
-        private T Execute<T>(IRestRequest request) where T : new()
+        internal T Execute<T>(IRestRequest request) where T : new()
         {
             IRestResponse<T> response = Client.Execute<T>(request);
 
