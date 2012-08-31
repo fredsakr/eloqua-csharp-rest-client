@@ -56,6 +56,7 @@
     <Compile Include="Clients\Data\ActivityClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />
     <Compile Include="Clients\Data\CustomObjectClientTests.cs" />
+    <Compile Include="Clients\Systems\CloudDataClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

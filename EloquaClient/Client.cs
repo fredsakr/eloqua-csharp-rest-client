@@ -1,5 +1,6 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Clients.Assets;
 using Eloqua.Api.Rest.ClientLibrary.Clients.Data;
+using Eloqua.Api.Rest.ClientLibrary.Clients.Systems;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
@@ -34,6 +35,15 @@ namespace Eloqua.Api.Rest.ClientLibrary
         public DataClient Data
         {
             get { return new DataClient(BaseClient); }
+        }
+
+        #endregion
+
+        #region Systems Client
+
+        public SystemClient Systems
+        {
+            get { return new SystemClient(BaseClient); }
         }
 
         #endregion

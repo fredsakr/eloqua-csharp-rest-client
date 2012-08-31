@@ -51,6 +51,7 @@
     <Compile Include="Clients\Data\DataClient.cs" />
     <Compile Include="Clients\GenericClient.cs" />
     <Compile Include="Clients\SearchClient.cs" />
+    <Compile Include="Clients\Systems\SystemClient.cs" />
     <Compile Include="IIdentifiable.cs" />
     <Compile Include="ISearchable.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Models\FieldDisplayType.cs" />
     <Compile Include="Models\Scope.cs" />
     <Compile Include="Models\Size.cs" />
+    <Compile Include="Models\Systems\Cloud\CloudDataInstance.cs" />
     <Compile Include="RestObject.cs" />
     <Compile Include="Models\Conditions\Condition.cs" />
     <Compile Include="Models\Conditions\ConditionOperator.cs" />

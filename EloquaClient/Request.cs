@@ -57,10 +57,13 @@ namespace Eloqua.Api.Rest.ClientLibrary
                     if (restObj.id != null && restObj.id > 0)
                     {
                         resource.Append("/" + restObj.id);
+                    } else
+                    {
+                        resource.Append("s"); // pluralize the endpoint
                     }
 
                     var searchObj = restObj as ISearchable;
-                    resource.Append("s?search=" + searchObj.searchTerm +
+                    resource.Append("?search=" + searchObj.searchTerm +
                                     "&count=" + searchObj.pageSize +
                                     "&page=" + searchObj.page +
                                     "&depth=complete");
