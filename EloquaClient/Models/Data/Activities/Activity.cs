@@ -6,6 +6,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Data.Activities
     public class Activity : RestObject, ISearchable
     {
         public int activityDate { get; set; }
+        public int asset { get; set; }
         public string activityType { get; set; }
         public string assetType { get; set; }
         public int contact { get; set; }
