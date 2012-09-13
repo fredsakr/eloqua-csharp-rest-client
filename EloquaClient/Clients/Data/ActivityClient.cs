@@ -23,17 +23,5 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
 
             return _baseClient.Execute<List<Activity>>(request);
         }
-
-        public List<BouncebackActivity> Get(int? id, int count, long startDate, long endDate, int page)
-        {
-            var request = new RestRequest
-            {
-                RequestFormat = DataFormat.Json,
-                RootElement = "elements",
-                Resource = string.Format("/data/activities/contact/{0}/automation/bounceback?count={1}&startAt={2}&endAt={3}&page={4}", id, count, startDate, endDate, page)
-            };
-
-            return _baseClient.Execute<List<BouncebackActivity>>(request);
-        }
     }
 }
