@@ -70,6 +70,16 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
 
         #endregion
 
+        #region EmailDeployment
+
+        public GenericClient<EmailDeployment> EmailDeployment
+        {
+            get { return _emailDeploymentDataClient ?? (_emailDeploymentDataClient = new GenericClient<EmailDeployment>(BaseClient)); }
+        }
+        private GenericClient<EmailDeployment> _emailDeploymentDataClient;
+
+        #endregion
+
         #region LandingPages
 
         public GenericClient<LandingPage> LandingPage
