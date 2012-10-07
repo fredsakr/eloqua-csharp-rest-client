@@ -8,18 +8,6 @@
         public string defaultValue { get; set; }
         public string displayType { get; set; }
         public string internalName { get; set; }
-        public string type
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(type))
-                {
-                    _type = "CustomObjectField";
-                }
-                return _type;
-            }
-            set { _type = value; }
-        }
-        private string _type;
+        public string type { get; set; }
     }
 }
