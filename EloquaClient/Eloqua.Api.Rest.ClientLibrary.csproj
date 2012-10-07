@@ -75,6 +75,7 @@
     <Compile Include="Authenticator.cs" />
     <Compile Include="BaseClient.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="Models\Assets\Emails\EmailDeployment.cs" />
     <Compile Include="Models\Assets\Microsites\Microsite.cs" />
     <Compile Include="Models\Assets\OptionLists\Option.cs" />
     <Compile Include="Models\Assets\OptionLists\OptionList.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="Models\Data\Activities\ActivityAssetType.cs" />
     <Compile Include="Models\Data\Activities\ActivityList.cs" />
     <Compile Include="Models\Data\Activities\ActivityType.cs" />
+    <Compile Include="Models\Data\Activities\BouncebackActivity.cs" />
+    <Compile Include="Models\Data\Activities\BouncebackType.cs" />
     <Compile Include="Models\Data\Contacts\ContactListMember.cs" />
     <Compile Include="Models\FieldDataType.cs" />
     <Compile Include="Models\FieldDisplayType.cs" />
