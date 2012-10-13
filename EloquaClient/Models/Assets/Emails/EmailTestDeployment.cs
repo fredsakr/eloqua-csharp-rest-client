@@ -1,12 +1,14 @@
 ﻿namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
 {
-    [Resource("/assets/email/deployment", "EmailDeployment")]
-    public class EmailDeployment : RestObject, ISearchable
+    [Resource("/assets/email/deployment", "EmailTestDeployment")]
+    public class EmailTestDeployment : RestObject, ISearchable
     {
+        public int? contactId { get; set; }
         public Email email { get; set; }
         public int? successfulSendCount { get; set; }
         public int? failedSendCount { get; set; }
         public string endAt { get; set; }
+        public int? sendFromUserId { get; set; }
         public string sentContent { get; set; }
         public string sentSubject { get; set; }
 
