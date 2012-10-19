@@ -53,6 +53,7 @@
     <Compile Include="Clients\SearchClient.cs" />
     <Compile Include="Clients\SearchMembersClient.cs" />
     <Compile Include="Clients\Systems\SystemClient.cs" />
+    <Compile Include="Depth.cs" />
     <Compile Include="IIdentifiable.cs" />
     <Compile Include="ISearchable.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />

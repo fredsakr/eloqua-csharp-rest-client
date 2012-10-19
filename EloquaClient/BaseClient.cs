@@ -23,18 +23,13 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         #endregion
         
-        #region properties        
+        #region properties
 
         internal RestClient Client { get; set; }
 
         #endregion
 
         #region methods
-
-        private IRestResponse Execute(IRestRequest request)
-        {
-            return Client.Execute(request);
-        }
 
         internal T Execute<T>(IRestRequest request) where T : new()
         {
@@ -47,7 +42,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return response.Data;
         }
 
-        public T Get<T>(int id) where T : RestObject, new()
+        public T Get<T>(int id, Depth depth = Depth.complete) where T : RestObject, new()
         {
             var item = new T { id = id };
             var request = Request.Get(Request.Type.Get, item);
@@ -73,16 +68,16 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return Execute<T>(request);
         }
 
-        public RestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize) where T : RestObject, ISearchable, new()
+        public RestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
         {
-            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
+            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize, depth = depth.ToString()};
             var request = Request.Get(Request.Type.Search, items);
             return Execute<RestObjectList<T>>(request);
         }
 
-        public RestObjectList<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize) where T : RestObject, ISearchable, new()
+        public RestObjectList<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
         {
-            var items = new T { id = id, searchTerm = searchTerm, page = pageNumber, pageSize = pageSize };
+            var items = new T { id = id, searchTerm = searchTerm, page = pageNumber, pageSize = pageSize, depth = Depth.complete.ToString()};
             var request = Request.Get(Request.Type.Search, items);
             return Execute<RestObjectList<T>>(request);
         }
