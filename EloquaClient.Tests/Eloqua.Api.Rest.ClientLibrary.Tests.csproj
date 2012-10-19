@@ -54,6 +54,7 @@
     <Compile Include="Clients\Assets\EmailClientTests.cs" />
     <Compile Include="Clients\Assets\EmailDeploymentTest.cs" />
     <Compile Include="Clients\Assets\MicrositeClientTests.cs" />
+    <Compile Include="Clients\Constants.cs" />
     <Compile Include="Clients\Data\ActivityClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />
     <Compile Include="Clients\Data\CustomObjectClientTests.cs" />

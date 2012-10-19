@@ -65,11 +65,11 @@
     <Compile Include="Models\Assets\Contacts\Segments\ContactFilterSegmentElement.cs" />
     <Compile Include="Models\Assets\Contacts\Segments\SegmentElement.cs" />
     <Compile Include="Models\Assets\Contacts\Views\ContactView.cs" />
+    <Compile Include="Models\Assets\ContentSections\ContentSection.cs" />
     <Compile Include="Models\Assets\CustomObjects\CustomObject.cs" />
     <Compile Include="Models\Assets\CustomObjects\CustomObjectField.cs" />
     <Compile Include="Models\Assets\DataField.cs" />
     <Compile Include="Models\Assets\DataView.cs" />
-    <Compile Include="Models\Assets\DynamicContents\ContentSection.cs" />
     <Compile Include="Models\Assets\DynamicContents\DynamicContent.cs" />
     <Compile Include="Models\Assets\DynamicContents\DynamicContentRule.cs" />
     <Compile Include="Models\Assets\Emails\Deployment\Contact.cs" />

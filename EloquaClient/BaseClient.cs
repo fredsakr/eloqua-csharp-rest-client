@@ -10,11 +10,11 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         protected BaseClient() {}
 
-        public BaseClient(string site, string user, string password)
+        public BaseClient(string site, string user, string password, string baseUrl)
         {
             Client = new RestClient
             {
-                BaseUrl = BaseUrl,
+                BaseUrl = baseUrl,
                 Authenticator = new HttpBasicAuthenticator(site + "\\" + user, password)
             };
 
@@ -23,9 +23,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         #endregion
         
-        #region properties
-
-        protected const string BaseUrl = "https://secure.eloqua.com/API/REST/1.0";
+        #region properties        
 
         internal RestClient Client { get; set; }
 

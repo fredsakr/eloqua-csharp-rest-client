@@ -65,8 +65,9 @@ namespace Eloqua.Api.Rest.ClientLibrary
                     var searchObj = restObj as ISearchable;
                     resource.Append("?search=" + searchObj.searchTerm +
                                     "&count=" + searchObj.pageSize +
-                                    "&page=" + searchObj.page +
-                                    "&depth=complete");
+                                    "&page=" + searchObj.page);
+
+                    resource.Append(string.IsNullOrEmpty(restObj.depth) ? "&depth=complete" : restObj.depth);
 
                     request.Resource = resource.ToString();
 

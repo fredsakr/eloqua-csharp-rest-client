@@ -8,9 +8,9 @@ namespace Eloqua.Api.Rest.ClientLibrary
     {
         #region constructor
 
-        public Client(string site, string user, string password)
+        public Client(string site, string user, string password, string baseUrl)
         {
-            BaseClient = new BaseClient(site, user, password);
+            BaseClient = new BaseClient(site, user, password, baseUrl);
         }
 
         #endregion

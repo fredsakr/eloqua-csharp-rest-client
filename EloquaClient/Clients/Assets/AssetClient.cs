@@ -2,6 +2,7 @@
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Lists;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Segments;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Views;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.ContentSections;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.CustomObjects;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails;

@@ -15,7 +15,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Client("site", "user", "password");
+            _client = new Client("site", "user", "password", Constants.BaseUrl);
         }
 
         [Test]

@@ -1,4 +1,6 @@
-﻿namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents
+﻿using Eloqua.Api.Rest.ClientLibrary.Models.Assets.ContentSections;
+
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents
 {
     public class DynamicContentRule : RestObject
     {
