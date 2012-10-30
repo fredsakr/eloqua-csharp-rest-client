@@ -1,4 +1,5 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Models.Content;
+using System.Collections.Generic;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
 {
@@ -19,6 +20,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
         public string senderName { get; set; }
         public bool sendPlainTextOnly { get; set; }
         public string subject { get; set; }
+        public List<Hyperlink> hyperlinks { get; set; }
 
         #region ISearchable
 
