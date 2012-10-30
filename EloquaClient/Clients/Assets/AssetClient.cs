@@ -2,6 +2,7 @@
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Lists;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Segments;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Views;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.ContentSections;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.CustomObjects;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails;
@@ -72,11 +73,24 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
 
         #region EmailDeployment
 
-        public GenericClient<EmailDeployment> EmailDeployment
+        public SearchClient<EmailDeployment> EmailDeployment
         {
-            get { return _emailDeploymentDataClient ?? (_emailDeploymentDataClient = new GenericClient<EmailDeployment>(BaseClient)); }
+            get { return _emailDeployment ?? (_emailDeployment = new SearchClient<EmailDeployment>(BaseClient)); }
         }
-        private GenericClient<EmailDeployment> _emailDeploymentDataClient;
+        private SearchClient<EmailDeployment> _emailDeployment; 
+
+        public GenericClient<EmailInlineDeployment> EmailInlineDeployment
+        {
+            get { return _emailInlineDeployment ?? (_emailInlineDeployment = new GenericClient<EmailInlineDeployment>(BaseClient)); }
+        }
+        private GenericClient<EmailInlineDeployment> _emailInlineDeployment;
+
+        public GenericClient<EmailTestDeployment> EmailTestDeployment
+        {
+            get { return _emailTestDeployment ?? (_emailTestDeployment = new GenericClient<EmailTestDeployment>(BaseClient)); }
+        } 
+
+        private GenericClient<EmailTestDeployment> _emailTestDeployment;
 
         #endregion
 

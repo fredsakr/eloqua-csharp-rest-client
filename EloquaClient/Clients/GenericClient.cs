@@ -15,14 +15,14 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients
             return _baseClient.Get<T> (id);
         }
 
-        public RestObjectList<T> Get(string search, int pageNumber, int pageSize)
+        public RestObjectList<T> Get(string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
         {
-            return _baseClient.Get<T> (search, pageNumber, pageSize);
+            return _baseClient.Get<T> (search, pageNumber, pageSize, depth);
         }
 
-        public RestObjectList<T> Get(int? id, string search, int pageNumber, int pageSize)
+        public RestObjectList<T> Get(int? id, string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
         {
-            return _baseClient.Get<T>(id, search, pageNumber, pageSize);
+            return _baseClient.Get<T>(id, search, pageNumber, pageSize, depth);
         }
 
         public T Post(T restObj)

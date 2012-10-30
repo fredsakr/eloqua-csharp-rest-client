@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Eloqua.Api.Rest.ClientLibrary.Models.Data.Activities;
 using RestSharp;
 
@@ -13,12 +12,12 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
         }
         readonly BaseClient _baseClient;
 
-        public List<Activity> Get(int? id, string type, int count, long startDate, long endDate)
+        public List<Activity> Get(int? id, string type, int count, long startDate, long endDate, int page)
         {
             var request = new RestRequest
             {
                 RequestFormat = DataFormat.Json,
-                Resource = string.Format("/data/activities/contact/{0}?type={1}&count={2}&startDate={3}&endDate={4}", id, type, count, startDate, endDate) 
+                Resource = string.Format("/data/activities/contact/{0}?type={1}&count={2}&startDate={3}&endDate={4}&page={5}", id, type, count, startDate, endDate, page) 
             };
 
             return _baseClient.Execute<List<Activity>>(request);

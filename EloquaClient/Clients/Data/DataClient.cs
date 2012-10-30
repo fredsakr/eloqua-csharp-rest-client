@@ -29,12 +29,12 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
         }
         private GenericClient<Contact> _contactClient;
 
-        public SearchClient<ContactListMember> ContactListMember
+        public SearchMembersClient<ContactListMember> ContactListMember
         {
-            get { return _contactListMemberClient ?? (_contactListMemberClient = new SearchClient<ContactListMember>(BaseClient)); }
+            get { return _contactListMemberClient ?? (_contactListMemberClient = new SearchMembersClient<ContactListMember>(BaseClient)); }
         }
 
-        private SearchClient<ContactListMember> _contactListMemberClient;
+        private SearchMembersClient<ContactListMember> _contactListMemberClient;
 
         public ActivityClient Activity
         {

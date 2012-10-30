@@ -10,9 +10,9 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients
         }
         readonly BaseClient _baseClient;
 
-        public RestObjectList<T> Get(int? id, string search, int pageNumber, int pageSize)
+        public RestObjectList<T> Get(string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
         {
-            return _baseClient.Get<T>(id, search, pageNumber, pageSize);
+            return _baseClient.Get<T>(search, pageNumber, pageSize, depth);
         }
     }
 }

@@ -1,6 +1,0 @@
-C:\Users\AWard\Documents\GitHub\eloqua-csharp-rest-client\EloquaClient\bin\Debug\Eloqua.Api.Rest.ClientLibrary.dll
-C:\Users\AWard\Documents\GitHub\eloqua-csharp-rest-client\EloquaClient\bin\Debug\Eloqua.Api.Rest.ClientLibrary.pdb
-C:\Users\AWard\Documents\GitHub\eloqua-csharp-rest-client\EloquaClient\bin\Debug\RestSharp.dll
-C:\Users\AWard\Documents\GitHub\eloqua-csharp-rest-client\EloquaClient\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\AWard\Documents\GitHub\eloqua-csharp-rest-client\EloquaClient\obj\Debug\Eloqua.Api.Rest.ClientLibrary.dll
-C:\Users\AWard\Documents\GitHub\eloqua-csharp-rest-client\EloquaClient\obj\Debug\Eloqua.Api.Rest.ClientLibrary.pdb

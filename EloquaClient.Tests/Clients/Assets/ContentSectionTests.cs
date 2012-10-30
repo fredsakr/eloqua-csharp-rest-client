@@ -1,4 +1,5 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Models;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.ContentSections;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
 using NUnit.Framework;
 
@@ -12,7 +13,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Client("site", "user", "password");
+            _client = new Client("site", "user", "password", Constants.BaseUrl);
         }
 
         [Test]

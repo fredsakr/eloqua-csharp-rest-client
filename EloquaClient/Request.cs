@@ -66,7 +66,8 @@ namespace Eloqua.Api.Rest.ClientLibrary
                     resource.Append("?search=" + searchObj.searchTerm +
                                     "&count=" + searchObj.pageSize +
                                     "&page=" + searchObj.page +
-                                    "&depth=complete");
+                                    "&depth=" + restObj.depth
+                                    );
 
                     request.Resource = resource.ToString();
 
