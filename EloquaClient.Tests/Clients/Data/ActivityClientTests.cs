@@ -30,7 +30,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Data
         {
             var activities = _client.Data.Activity.Get(380458, ActivityType.emailSend.ToString(), 1000,
                                                        ConvertToUnixEpoch(new DateTime(2012, 01, 01)),
-                                                       ConvertToUnixEpoch(new DateTime(2012, 08, 01)));
+                                                       ConvertToUnixEpoch(new DateTime(2012, 08, 01)), 1);
 
             Assert.Greater(0, activities.Count);
         }
