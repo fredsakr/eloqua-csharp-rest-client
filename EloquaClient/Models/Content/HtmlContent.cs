@@ -1,4 +1,11 @@
-﻿namespace Eloqua.Api.Rest.ClientLibrary.Models.Content
+﻿using System.Runtime.Serialization;
+
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Content
 {
-    public abstract class HtmlContent {}
+    [KnownType(typeof(RawHtmlContent))]
+    [KnownType(typeof(StructuredHtmlContent))]
+    public abstract class HtmlContent
+    {
+        public string contentSource { get; set; }
+    }
 }

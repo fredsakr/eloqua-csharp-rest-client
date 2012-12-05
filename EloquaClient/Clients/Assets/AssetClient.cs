@@ -102,6 +102,12 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
         }
         private GenericClient<LandingPage> _landingPage;
 
+        public GenericClient<StructuredLandingPage> StructuredLandingPage
+        {
+            get { return _structuredLandingPage ?? (_structuredLandingPage = new GenericClient<StructuredLandingPage>(BaseClient)); }
+        }
+        private GenericClient<StructuredLandingPage> _structuredLandingPage;
+
         #endregion
 
         #region CustomObjects
