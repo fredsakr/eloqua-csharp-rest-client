@@ -16,7 +16,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             {
                 if (string.IsNullOrEmpty(_uri))
                 {
-                    Resource att = (Resource) Attribute.GetCustomAttribute(GetType(), typeof (Resource));
+                    var att = (Resource) Attribute.GetCustomAttribute(GetType(), typeof (Resource));
                     _uri = att.Uri;
                 }
                 return _uri;
@@ -30,7 +30,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             {
                 if (string.IsNullOrEmpty(_type))
                 {
-                    Resource att = (Resource)Attribute.GetCustomAttribute(GetType(), typeof(Resource));
+                    var att = (Resource)Attribute.GetCustomAttribute(GetType(), typeof(Resource));
                     _type = att.Type;
                 }
                 return _type;
