@@ -37,7 +37,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
             if (response.ResponseStatus != ResponseStatus.Completed)
             {
-                throw response.ErrorException;
+                throw Validation.ResponseValidator.GetExceptionFromResponse(response);
             }
             return response.Data;
         }
@@ -68,18 +68,18 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return Execute<T>(request);
         }
 
-        public RestObjectList<T> Get<T>(string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
+        public SearchResponse<T> Get<T>(string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
         {
             var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize, depth = depth.ToString()};
             var request = Request.Get(Request.Type.Search, items);
-            return Execute<RestObjectList<T>>(request);
+            return Execute<SearchResponse<T>>(request);
         }
 
-        public RestObjectList<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
+        public SearchResponse<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
         {
             var items = new T { id = id, searchTerm = searchTerm, page = pageNumber, pageSize = pageSize, depth = Depth.complete.ToString()};
             var request = Request.Get(Request.Type.Search, items);
-            return Execute<RestObjectList<T>>(request);
+            return Execute<SearchResponse<T>>(request);
         }
 
         #endregion

@@ -96,6 +96,9 @@
     <Compile Include="Models\Data\Activities\BouncebackActivity.cs" />
     <Compile Include="Models\Data\Activities\BouncebackType.cs" />
     <Compile Include="Models\Data\Contacts\ContactListMember.cs" />
+    <Compile Include="Models\Errors\ObjectKey.cs" />
+    <Compile Include="Models\Errors\ObjectValidationError.cs" />
+    <Compile Include="Models\Errors\ValidationError.cs" />
     <Compile Include="Models\FieldDataType.cs" />
     <Compile Include="Models\FieldDisplayType.cs" />
     <Compile Include="Models\Scope.cs" />
@@ -118,10 +121,12 @@
     <Compile Include="Models\Data\Contacts\Contact.cs" />
     <Compile Include="Models\Data\CustomObjects\CustomObject.cs" />
     <Compile Include="Models\FieldValue.cs" />
-    <Compile Include="Models\RestObjectList.cs" />
+    <Compile Include="Models\SearchResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="Resource.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Validation\ResponseValidator.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
