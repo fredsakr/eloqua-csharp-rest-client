@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Eloqua-csharp-rest-client : Eloqua C# Rest Client" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Eloqua-csharp-rest-client</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/fredsakr/eloqua-csharp-rest-client">View on GitHub</a>
+
+          <h1 id="project_title">Eloqua-csharp-rest-client</h1>
+          <h2 id="project_tagline">Eloqua C# Rest Client</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/fredsakr/eloqua-csharp-rest-client/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/fredsakr/eloqua-csharp-rest-client/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>eloqua-csharp-rest-client</h1>
+
+<p>Eloqua C# Rest Client</p>
+
+<h2>Usage</h2>
+
+<h3>Create Client</h3>
+
+<pre><code>var client = new Eloqua.Api.Rest.ClientLibrary.Client("site", "user", "pass", "baseUrl");
+</code></pre>
+
+<h3>GET (item)</h3>
+
+<pre><code>int emailId = 1;    
+Email email = client.Assets.Email.Get(emailId);
+</code></pre>
+
+<h3>GET (list)</h3>
+
+<pre><code>List&lt;Email&gt; emails = client.Assets.Email.Get("searchTerm", pageNumber, pageSize);
+</code></pre>
+
+<h3>POST</h3>
+
+<pre><code>Email email = new Email() { ... };
+email = client.Assets.Email.Post(Email);
+</code></pre>
+
+<h3>PUT</h3>
+
+<pre><code>Email email = new Email() { ... };  
+email = client.Assets.Email.Put(Email);
+</code></pre>
+
+<h3>DELETE</h3>
+
+<pre><code>int emailId = 1;    
+client.Assets.Email.Delete(emailId);
+</code></pre>
+
+<h2>License</h2>
+
+<pre><code>Copyright [2012] [Fred Sakr]
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Eloqua-csharp-rest-client maintained by <a href="https://github.com/fredsakr">fredsakr</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
