@@ -20,6 +20,5 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Deployment
         public string senderName { get; set; }
         public bool sendPlainTextOnly { get; set; }
         public string subject { get; set; }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Deployment;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
@@ -8,14 +9,14 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
     {
         public int? clickthroughCount { get; set; }
         public List<Contact> contacts { get; set; }
-        public int? failedSendCount { get; set; }
-        public Deployment.Email email { get; set; }
-        public string endAt { get; set; }
-        public int? sendFromUserId { get; set; }
-        public int? successfulSendCount { get; set; }
         public int? openCount { get; set; }
-        public string sentContent { get; set; }
+        public int? sendFromUserId { get; set; }
+        public List<EmailDeploymentStatistics> statistics { get; set; }
+        public Deployment.Email email { get; set; }
+        public DateTime endAt { get; set; }
+        public int? failedSendCount { get; set; }
         public string sentSubject { get; set; }
+        public string successfulSendCount { get; set; }
 
         #region ISearchable
 

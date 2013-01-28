@@ -1,7 +1,8 @@
 ﻿namespace Eloqua.Api.Rest.ClientLibrary.Models.Content
 {
-    public class RawHtmlContent : HtmlContent
+    public class RawHtmlContent
     {
-        public string htmlBody { get; set; }
+        public string type { get; set; }
+        public string html { get; set; }
     }
 }

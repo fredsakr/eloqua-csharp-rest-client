@@ -30,7 +30,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         {
             var contact = new Models.Assets.Emails.Deployment.Contact()
                                   {
-                                      id = 152365,
+                                      id = 1,
                                       emailAddress = "fred.sakr@eloqua.com"
                                   };
 
@@ -42,10 +42,12 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
             Email email = new Email()
                               {
                                   name = "sample email",
+                                  subject = "sample subject",
                                   htmlContent = new RawHtmlContent()
                                                     {
-                                                        htmlBody = "<html><head></head><body>test</body></html>"
-                                                    }
+                                                        html = "<html><head></head><body>test</body></html>",
+                                                        type = "RawHtmlContent"
+                                                    },
                               };
 
             var name = string.Format("unit-test_{0}", Guid.NewGuid());
