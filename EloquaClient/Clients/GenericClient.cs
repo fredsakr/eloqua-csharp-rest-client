@@ -1,4 +1,5 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Models;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Deployment.Structured;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Clients
 {

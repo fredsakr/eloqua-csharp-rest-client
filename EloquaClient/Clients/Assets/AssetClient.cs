@@ -69,6 +69,13 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
         }
         private GenericClient<Email> _emailClient;
 
+        public GenericClient<Models.Assets.Emails.Structured.Email> StructuredEmail
+        {
+            get { return _structuredEmailClient ?? ( _structuredEmailClient = new GenericClient<Models.Assets.Emails.Structured.Email>(BaseClient)); }
+        }
+        private GenericClient<Models.Assets.Emails.Structured.Email> _structuredEmailClient;
+
+
         #endregion
 
         #region EmailDeployment
@@ -84,6 +91,12 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
             get { return _emailInlineDeployment ?? (_emailInlineDeployment = new GenericClient<EmailInlineDeployment>(BaseClient)); }
         }
         private GenericClient<EmailInlineDeployment> _emailInlineDeployment;
+
+        public GenericClient<Models.Assets.Emails.Deployment.Structured.EmailInlineDeployment> StructuredEmailInlineDeployment
+        {
+            get { return _structuredEmailInlineDeployment ?? (_structuredEmailInlineDeployment = new GenericClient<Models.Assets.Emails.Deployment.Structured.EmailInlineDeployment>(BaseClient)); }
+        }
+        private GenericClient<Models.Assets.Emails.Deployment.Structured.EmailInlineDeployment> _structuredEmailInlineDeployment;
 
         public GenericClient<EmailTestDeployment> EmailTestDeployment
         {

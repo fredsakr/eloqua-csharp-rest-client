@@ -2,7 +2,7 @@
 using Eloqua.Api.Rest.ClientLibrary.Models.Content;
 using System.Collections.Generic;
 
-namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
+namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Structured
 {
     [Resource("/assets/email", "Email")]
     public class Email : RestObject, ISearchable
@@ -12,7 +12,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
         public int? emailGroupId { get; set; }
         public int? emailHeaderId { get; set; }
         public int? encodingId { get; set; }
-        public RawHtmlContent htmlContent { get; set; }
+        public StructuredHtmlContent htmlContent { get; set; }
         public bool isPlainTextEditable { get; set; }
         public string plainText { get; set; }
         public string replyToName { get; set; }
