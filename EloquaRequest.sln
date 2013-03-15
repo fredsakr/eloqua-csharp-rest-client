@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19B9E622-F341-4063-9ABE-7D992A8F9DB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eloqua.Api.Rest.ClientLibrary", "EloquaClient\Eloqua.Api.Rest.ClientLibrary.csproj", "{ED7D459B-29D8-4505-AD01-6DF6B76D9B2E}"

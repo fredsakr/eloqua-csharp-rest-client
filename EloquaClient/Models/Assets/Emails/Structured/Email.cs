@@ -22,7 +22,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Structured
         public bool sendPlainTextOnly { get; set; }
         public string subject { get; set; }
         public List<Hyperlink> hyperlinks { get; set; }
-        public string type = "Email";
+        public new string type = "Email";
 
         #region ISearchable
 

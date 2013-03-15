@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EloquaClient.Tests")]
+[assembly: AssemblyProduct("Eloqua.Api.Rest.ClientLibrary.Tests")]
 [assembly: AssemblyCopyright("Fred Sakr")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
