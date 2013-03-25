@@ -27,7 +27,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         [Test]
         public void GetEmailListTest()
         {
-            var result = _client.Assets.Email.Get("*", 1, 1);
+            var result = _client.Assets.Email.Get("*", 1, 100);
             Assert.AreEqual(1, result.elements.Count);
         }
 

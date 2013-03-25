@@ -8,6 +8,8 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
     public class Email : RestObject, ISearchable
     {
         public string bouncebackEmail { get; set; }
+        public int? createdAt { get; set; }
+        public int? createdBy { get; set; }
         public int? emailFooterId { get; set; }
         public int? emailGroupId { get; set; }
         public int? emailHeaderId { get; set; }
@@ -23,6 +25,8 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails
         public string subject { get; set; }
         public List<Hyperlink> hyperlinks { get; set; }
         public new string type = "Email";
+        public int? updatedAt { get; set; }
+        public int? updatedBy { get; set; }
 
         #region ISearchable
 
