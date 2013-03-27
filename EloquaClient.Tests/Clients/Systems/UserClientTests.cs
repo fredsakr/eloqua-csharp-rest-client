@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 
-namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
+namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Systems
 {
     [TestFixture]
-    public class LandingPageClientTests
+    public class UserClientTests
     {
         private Client _client;
 
@@ -14,10 +14,10 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         }
 
         [Test]
-        public void SearchLandingPageTest()
+        public void SearchUsersTest()
         {
-            var landingPages = _client.Assets.LandingPage.Get("*", 1, 100);
-            Assert.Greater(landingPages.elements.Count, 0);
+            var response = _client.Systems.User.Get("*", 1, 10);
+            Assert.Greater(response.total, 0);
         }
     }
 }

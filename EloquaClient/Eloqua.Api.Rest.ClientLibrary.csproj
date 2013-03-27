@@ -111,6 +111,10 @@
     <Compile Include="Models\Scope.cs" />
     <Compile Include="Models\Size.cs" />
     <Compile Include="Models\Systems\Cloud\CloudDataInstance.cs" />
+    <Compile Include="Models\Systems\Users\ProductPermission.cs" />
+    <Compile Include="Models\Systems\Users\TypePermission.cs" />
+    <Compile Include="Models\Systems\Users\TypePermissions.cs" />
+    <Compile Include="Models\Systems\Users\User.cs" />
     <Compile Include="RestObject.cs" />
     <Compile Include="Models\Conditions\Condition.cs" />
     <Compile Include="Models\Conditions\ConditionOperator.cs" />

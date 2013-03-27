@@ -1,4 +1,5 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Models.Systems.Cloud;
+using Eloqua.Api.Rest.ClientLibrary.Models.Systems.Users;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Clients.Systems
 {
@@ -16,6 +17,16 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Systems
         #region properties
 
         protected BaseClient BaseClient;
+
+        #endregion
+
+        #region Users
+
+        public GenericClient<User> User
+        {
+            get { return _userClient ?? (_userClient = new GenericClient<User>(BaseClient)); }
+        }
+        private GenericClient<User> _userClient;
 
         #endregion
 
