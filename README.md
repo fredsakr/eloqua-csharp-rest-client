@@ -16,7 +16,7 @@ Eloqua C# Rest Client
 	List<Email> emails = client.Assets.Email.Get("searchTerm", pageNumber, pageSize);
 
 ### POST
-	Email email = new Email() { ... };
+	Email email = new Email() {...};
 	email = client.Assets.Email.Post(Email);
 
 ### PUT
