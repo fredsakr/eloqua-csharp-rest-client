@@ -60,6 +60,7 @@
     <Compile Include="Clients\Assets\DynamicContentTests.cs" />
     <Compile Include="Clients\Assets\EmailClientTests.cs" />
     <Compile Include="Clients\Assets\EmailDeploymentTest.cs" />
+    <Compile Include="Clients\Assets\EmailGroupClientTests.cs" />
     <Compile Include="Clients\Assets\LandingPageClientTests.cs" />
     <Compile Include="Clients\Assets\MicrositeClientTests.cs" />
     <Compile Include="Clients\Assets\StructuredEmailDeploymentTests.cs" />

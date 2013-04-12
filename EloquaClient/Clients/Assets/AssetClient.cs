@@ -6,6 +6,7 @@ using Eloqua.Api.Rest.ClientLibrary.Models.Assets.ContentSections;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.CustomObjects;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Groups;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.LandingPages;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Microsites;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.OptionLists;
@@ -75,6 +76,11 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
         }
         private GenericClient<Models.Assets.Emails.Structured.Email> _structuredEmailClient;
 
+        public GenericClient<EmailGroup> EmailGroup
+        {
+            get { return _emailGroupClient ?? (_emailGroupClient = new GenericClient<EmailGroup>(BaseClient)); }
+        }
+        private GenericClient<EmailGroup> _emailGroupClient; 
 
         #endregion
 
