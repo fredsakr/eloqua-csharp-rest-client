@@ -53,6 +53,7 @@
     <Compile Include="Clients\Assets\AssetClient.cs" />
     <Compile Include="Clients\Data\ActivityClient.cs" />
     <Compile Include="Clients\Data\DataClient.cs" />
+    <Compile Include="Clients\Data\SubscriptionClient.cs" />
     <Compile Include="Clients\GenericClient.cs" />
     <Compile Include="Clients\SearchClient.cs" />
     <Compile Include="Clients\SearchMembersClient.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Models\Assets\Emails\EmailDeploymentStatistics.cs" />
     <Compile Include="Models\Assets\Emails\EmailInlineDeployment.cs" />
     <Compile Include="Models\Assets\Emails\EmailTestDeployment.cs" />
+    <Compile Include="Models\Assets\Emails\Groups\EmailGroup.cs" />
     <Compile Include="Models\Assets\Emails\Structured\Email.cs" />
     <Compile Include="Models\Assets\Hyperlinks\Hyperlink.cs" />
     <Compile Include="Models\Assets\LandingPages\Structured\StructuredLandingPage.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Models\Data\Activities\ActivityType.cs" />
     <Compile Include="Models\Data\Activities\BouncebackActivity.cs" />
     <Compile Include="Models\Data\Activities\BouncebackType.cs" />
+    <Compile Include="Models\Data\Contacts\ContactEmailSubscription.cs" />
     <Compile Include="Models\Data\Contacts\ContactListMember.cs" />
     <Compile Include="Models\Errors\ObjectKey.cs" />
     <Compile Include="Models\Errors\ObjectValidationError.cs" />

@@ -43,6 +43,14 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
 
         private ActivityClient _activity;
 
+        public SubscriptionClient ContactEmailSubscription
+        {
+            get { return _subscription ?? (_subscription = new SubscriptionClient(BaseClient)); }
+        }
+
+        private SubscriptionClient _subscription;
+
+
         #endregion
 
         #region Accounts
