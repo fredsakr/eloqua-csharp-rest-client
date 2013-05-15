@@ -44,7 +44,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         public T Get<T>(int id, Depth depth = Depth.complete) where T : RestObject, new()
         {
-            var item = new T { id = id };
+            var item = new T { id = id, depth = depth.ToString()};
             var request = Request.Get(Request.Type.Get, item);
             return Execute<T>(request);
         }

@@ -11,9 +11,9 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients
         }
         readonly BaseClient _baseClient;
 
-        public T Get(int id)
+        public T Get(int id, Depth depth = Depth.minimal)
         {
-            return _baseClient.Get<T> (id);
+            return _baseClient.Get<T> (id, depth);
         }
 
         public SearchResponse<T> Get(string search, int pageNumber, int pageSize, Depth depth = Depth.complete)

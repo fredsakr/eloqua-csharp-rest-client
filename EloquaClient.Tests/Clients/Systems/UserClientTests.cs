@@ -19,5 +19,12 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Systems
             var response = _client.Systems.User.Get("*", 1, 10);
             Assert.Greater(response.total, 0);
         }
+
+        [Test]
+        public void GetUserTest()
+        {
+            var response = _client.Systems.User.Get(2, Depth.complete);
+            Assert.IsNotNull(response);
+        }
     }
 }

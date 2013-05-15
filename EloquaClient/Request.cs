@@ -28,7 +28,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             {
                 case Type.Get:
                     request.Method = Method.GET;
-                    request.Resource = restObj.Uri + "/" + restObj.id;
+                    request.Resource = restObj.Uri + "/" + restObj.id + "?depth=" + restObj.depth;
                     break;
 
                 case Type.Put:
