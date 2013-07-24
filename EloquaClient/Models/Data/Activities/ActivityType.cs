@@ -9,6 +9,7 @@
         emailUnsubscribe = 5,
         formSubmit = 6,
         webVisit = 7,
-        campaignMembership = 9
+        campaignMembership = 9,
+        externalActivity  = 10
     }
 }
