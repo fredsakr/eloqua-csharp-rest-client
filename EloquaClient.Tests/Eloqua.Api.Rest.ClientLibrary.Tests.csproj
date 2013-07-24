@@ -61,6 +61,7 @@
     <Compile Include="Clients\Assets\EmailClientTests.cs" />
     <Compile Include="Clients\Assets\EmailDeploymentTest.cs" />
     <Compile Include="Clients\Assets\EmailGroupClientTests.cs" />
+    <Compile Include="Clients\Assets\ExternalAssetTests.cs" />
     <Compile Include="Clients\Assets\LandingPageClientTests.cs" />
     <Compile Include="Clients\Assets\MicrositeClientTests.cs" />
     <Compile Include="Clients\Assets\StructuredEmailDeploymentTests.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Clients\Data\ActivityClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />
     <Compile Include="Clients\Data\CustomObjectClientTests.cs" />
+    <Compile Include="Clients\Data\ExternalActivityClientTests.cs" />
     <Compile Include="Clients\Data\SubscriptionClientTests.cs" />
     <Compile Include="Clients\Systems\CloudDataClientTests.cs" />
     <Compile Include="Clients\Systems\UserClientTests.cs" />

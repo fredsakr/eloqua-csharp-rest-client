@@ -72,5 +72,16 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
         private GenericClient<CustomObject> _customObjectDataClient;
 
         #endregion
+
+        #region External Activities
+
+        public ExternalActivityClient ExternalActivity
+        {
+            get { return _externalActivity ?? (_externalActivity = new ExternalActivityClient(BaseClient)); }
+        }
+
+        private ExternalActivityClient _externalActivity;
+
+        #endregion
     }
 }

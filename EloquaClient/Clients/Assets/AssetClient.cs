@@ -7,6 +7,7 @@ using Eloqua.Api.Rest.ClientLibrary.Models.Assets.CustomObjects;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Emails.Groups;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.External;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.LandingPages;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Microsites;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.OptionLists;
@@ -174,5 +175,16 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
         private GenericClient<ContentSection> _contentSection;
 
         #endregion
+
+        #region External Assets
+
+        public GenericClient<ExternalAsset> ExternalAsset
+        {
+            get { return _externalAsset ?? (_externalAsset = new GenericClient<ExternalAsset>(BaseClient)); }
+        }
+        private GenericClient<ExternalAsset> _externalAsset;
+
+        #endregion
+
     }
 }
