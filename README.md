@@ -1,7 +1,7 @@
 eloqua-csharp-rest-client
 =========================
 
-Eloqua C# Rest Client is a library for REST API. It supports GET, POST, PUT and DELETE operations. The library contains models and clients for the Eloqua's core objects, including :
+Eloqua C# Rest Client is a library for Eloqua's REST API. It supports GET, POST, PUT and DELETE operations. The library contains models and clients for the Eloqua's core objects, including :
 * Accounts
 * Activities
 * Campaigns
