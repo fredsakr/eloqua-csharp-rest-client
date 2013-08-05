@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Account\AccountInfo.cs" />
     <Compile Include="Clients\Assets\AssetClient.cs" />
     <Compile Include="Clients\Data\ActivityClient.cs" />
     <Compile Include="Clients\Data\DataClient.cs" />
@@ -62,6 +63,12 @@
     <Compile Include="Depth.cs" />
     <Compile Include="IIdentifiable.cs" />
     <Compile Include="ISearchable.cs" />
+    <Compile Include="Models\Account\Apis.cs" />
+    <Compile Include="Models\Account\Rest.cs" />
+    <Compile Include="Models\Account\Site.cs" />
+    <Compile Include="Models\Account\Soap.cs" />
+    <Compile Include="Models\Account\Urls.cs" />
+    <Compile Include="Models\Account\ApiAccount.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
     <Compile Include="Models\Assets\Contacts\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\ContactFilter.cs" />
