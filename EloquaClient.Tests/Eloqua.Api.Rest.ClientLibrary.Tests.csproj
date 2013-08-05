@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Clients\AccountInfoTests.cs" />
     <Compile Include="Clients\Assets\ContentSectionTests.cs" />
+    <Compile Include="Clients\Assets\ContactFieldTests.cs" />
     <Compile Include="Clients\Assets\CustomObjectTests.cs" />
     <Compile Include="Clients\Assets\DynamicContentTests.cs" />
     <Compile Include="Clients\Assets\EmailClientTests.cs" />

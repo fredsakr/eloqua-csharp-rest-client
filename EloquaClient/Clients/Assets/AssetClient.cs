@@ -51,6 +51,13 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
         }
         private GenericClient<ContactView> _contactView;
 
+        public GenericClient<ContactField> ContactFields
+        {
+            get { return _contactFields ?? (_contactFields= new GenericClient<ContactField>(BaseClient)); }
+        } 
+        private GenericClient<ContactField> _contactFields;
+        
+
         #endregion
 
         #region Account Assets
