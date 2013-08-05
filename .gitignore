@@ -1,0 +1,7 @@
+# git ignore file
+[Bb]in
+obj
+*.suo
+*.csproj.user
+_ReSharper.*
+Build
