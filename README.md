@@ -46,7 +46,7 @@ Eloqua C# Rest Client is a library for Eloqua's REST API. It supports GET, POST,
 	client.Assets.Email.Delete(emailId);
 
 ## Endpoint URL
-To determine the base url, you can use the following endpoint : login.eloqua.com/{id}  
+To determine the base url, you can use the following endpoint : login.eloqua.com/id 
 The endpoint, when called with basic authentication, will return details about the URLs for the various APIs.
      
 ```json
