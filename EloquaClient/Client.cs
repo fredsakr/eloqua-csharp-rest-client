@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using Eloqua.Api.Rest.ClientLibrary.Clients.Assets;
+﻿using Eloqua.Api.Rest.ClientLibrary.Clients.Assets;
 using Eloqua.Api.Rest.ClientLibrary.Clients.Data;
 using Eloqua.Api.Rest.ClientLibrary.Clients.Systems;
 using Eloqua.Api.Rest.ClientLibrary.Models.Account;
@@ -8,8 +6,6 @@ using RestSharp;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
- 
-
     public class Client : BaseClient
     {
         #region constructor
