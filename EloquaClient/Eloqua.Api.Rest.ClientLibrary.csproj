@@ -78,7 +78,7 @@
     <Compile Include="Models\Assets\Contacts\Lists\ContactList.cs" />
     <Compile Include="Models\Assets\Contacts\Segments\ContactFilterSegmentElement.cs" />
     <Compile Include="Models\Assets\Contacts\Segments\SegmentElement.cs" />
-    <Compile Include="Models\Assets\Contacts\Views\ContactFields.cs" />
+    <Compile Include="Models\Assets\Contacts\Views\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Views\ContactView.cs" />
     <Compile Include="Models\Assets\ContentSections\ContentSection.cs" />
     <Compile Include="Models\Assets\CustomObjects\CustomObject.cs" />
