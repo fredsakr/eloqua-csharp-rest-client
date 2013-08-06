@@ -1,6 +1,8 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Clients.Assets;
 using Eloqua.Api.Rest.ClientLibrary.Clients.Data;
 using Eloqua.Api.Rest.ClientLibrary.Clients.Systems;
+using Eloqua.Api.Rest.ClientLibrary.Models.Account;
+using RestSharp;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
@@ -14,6 +16,12 @@ namespace Eloqua.Api.Rest.ClientLibrary
         }
 
         #endregion
+
+        public static AccountInfo GetAccountInfo(string site, string user, string password)
+        {
+            var client = new BaseClient(site, user, password, "https://login.eloqua.com");
+            return client.Execute<AccountInfo>(new RestRequest("id", Method.GET));
+        }
 
         #region properties
 

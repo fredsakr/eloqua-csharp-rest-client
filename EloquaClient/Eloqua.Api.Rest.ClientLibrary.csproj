@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Account\AccountInfo.cs" />
     <Compile Include="Clients\Assets\AssetClient.cs" />
     <Compile Include="Clients\Data\ActivityClient.cs" />
     <Compile Include="Clients\Data\DataClient.cs" />
@@ -62,8 +63,14 @@
     <Compile Include="Depth.cs" />
     <Compile Include="IIdentifiable.cs" />
     <Compile Include="ISearchable.cs" />
+    <Compile Include="Models\Account\Apis.cs" />
+    <Compile Include="Models\Account\Rest.cs" />
+    <Compile Include="Models\Account\Site.cs" />
+    <Compile Include="Models\Account\Soap.cs" />
+    <Compile Include="Models\Account\Urls.cs" />
+    <Compile Include="Models\Account\ApiAccount.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
-    <Compile Include="Models\Assets\Contacts\ContactField.cs" />
+    <Compile Include="Models\Assets\Contacts\Fields\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\ContactFilter.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\Criteria\ActivityCriterion.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\Criteria\Criterion.cs" />
@@ -71,6 +78,7 @@
     <Compile Include="Models\Assets\Contacts\Lists\ContactList.cs" />
     <Compile Include="Models\Assets\Contacts\Segments\ContactFilterSegmentElement.cs" />
     <Compile Include="Models\Assets\Contacts\Segments\SegmentElement.cs" />
+    <Compile Include="Models\Assets\Contacts\Views\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Views\ContactView.cs" />
     <Compile Include="Models\Assets\ContentSections\ContentSection.cs" />
     <Compile Include="Models\Assets\CustomObjects\CustomObject.cs" />
