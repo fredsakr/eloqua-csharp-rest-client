@@ -17,4 +17,6 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Segments
 
         #endregion
     }
+
+
 }
