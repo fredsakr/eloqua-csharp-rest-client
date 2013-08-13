@@ -30,6 +30,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
                 Resource = "/data/activity"
             };
 
+            request.AddBody(activities);
             return _baseClient.Execute<ExternalActivities>(request);
         }
     }

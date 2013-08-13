@@ -10,13 +10,13 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Client("site", "user", "password", Constants.BaseUrl);
+            _client = new Client("site", "username", "password", Constants.BaseUrl3);
         }
 
         [Test]
         public void SearchLandingPageTest()
         {
-            var landingPages = _client.Assets.LandingPage.Get("*", 1, 100);
+            var landingPages = _client.Assets.LandingPage.Get("id=9", 1, 100);
             Assert.Greater(landingPages.elements.Count, 0);
         }
     }
