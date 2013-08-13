@@ -24,19 +24,20 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Data
         [Test]
         public void CreateAndReadActivityTest()
         {
-            Client client = new Client("site", "user", "password", "baseurl");
             Activity activity = new Activity();
             ExternalActivities externalActivities = new ExternalActivities();
-            externalActivities.activityDate = "";
+            externalActivities.activityDate = "1362543780";
             externalActivities.activityType = "Webinar";
-            externalActivities.assetName = "";
-            externalActivities.assetType = "";
-            externalActivities.contactID = "100";
-            externalActivities.fieldValues = "";
+            externalActivities.assetName = "TEST_GENERIC_Asset";
+            externalActivities.assetType = "Test_Generic_Asset_Type";
+            externalActivities.contactId = "100";
+            externalActivities.campaignId = "4";
+            externalActivities.type = "ExternalActivities";
+
             ExternalActivities postExternalActivities;
-            postExternalActivities = client.Data.ExternalActivity.Post(externalActivities);
+            postExternalActivities = _client.Data.ExternalActivity.Post(externalActivities);
             ExternalActivities returnExternalActivities;
-            returnExternalActivities = client.Data.ExternalActivity.Get(int.Parse(postExternalActivities.contactID));
+            returnExternalActivities = _client.Data.ExternalActivity.Get(int.Parse(postExternalActivities.contactId));
         }
     }
 }
