@@ -6,8 +6,6 @@ namespace Eloqua.Api.Rest.ClientLibrary
 {
     public class BaseClient
     {
-        #region constructors
-
         protected BaseClient() {}
 
         public BaseClient(string site, string user, string password, string baseUrl)
@@ -21,15 +19,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
             Client.AddHandler("text/plain", new JsonDeserializer());
         }
 
-        #endregion
-        
-        #region properties
-
         internal RestClient Client { get; set; }
-
-        #endregion
-
-        #region methods
 
         internal T Execute<T>(IRestRequest request) where T : new()
         {
@@ -81,7 +71,5 @@ namespace Eloqua.Api.Rest.ClientLibrary
             var request = Request.Get(Request.Type.Search, items);
             return Execute<SearchResponse<T>>(request);
         }
-
-        #endregion
     }
 }
