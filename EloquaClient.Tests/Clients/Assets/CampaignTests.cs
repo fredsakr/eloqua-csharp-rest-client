@@ -13,7 +13,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Tests.Clients.Assets
         [TestFixtureSetUp]
         public void Init()
         {
-            _client = new Client("orse", "donald.ho", "GuuGyoza888", Constants.BaseUrl);
+            _client = new Client("", "", "", Constants.BaseUrl);
         }
 
         [Test]
