@@ -36,6 +36,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
@@ -70,6 +73,8 @@
     <Compile Include="Models\Account\Urls.cs" />
     <Compile Include="Models\Account\ApiAccount.cs" />
     <Compile Include="Models\Assets\Accounts\Views\AccountView.cs" />
+    <Compile Include="Models\Assets\Campaigns\Campaign.cs" />
+    <Compile Include="Models\Assets\Campaigns\CampaignRelatedElement.cs" />
     <Compile Include="Models\Assets\Contacts\Fields\ContactField.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\ContactFilter.cs" />
     <Compile Include="Models\Assets\Contacts\Filters\Criteria\ActivityCriterion.cs" />
@@ -152,6 +157,7 @@
     <Compile Include="Request.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Serializers\DynamicJsonDeserializer.cs" />
     <Compile Include="Validation\ResponseValidator.cs" />
   </ItemGroup>
   <ItemGroup>
