@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Eloqua.Api.Rest.ClientLibrary.Serializers;
+using RestSharp;
 using Eloqua.Api.Rest.ClientLibrary.Models;
 using RestSharp.Deserializers;
 
