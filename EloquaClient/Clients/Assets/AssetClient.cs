@@ -1,4 +1,5 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Accounts.Views;
+using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Campaigns;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Lists;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Segments;
 using Eloqua.Api.Rest.ClientLibrary.Models.Assets.Contacts.Views;
@@ -134,6 +135,16 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Assets
             get { return _structuredLandingPage ?? (_structuredLandingPage = new GenericClient<Models.Assets.LandingPages.Structured.LandingPage>(BaseClient)); }
         }
         private GenericClient<Models.Assets.LandingPages.Structured.LandingPage> _structuredLandingPage;
+
+        #endregion
+
+        #region Campaigns
+
+        public GenericClient<Campaign> Campaign
+        {
+            get { return _campaign ?? (_campaign = new GenericClient<Campaign>(BaseClient)); }
+        }
+        private GenericClient<Campaign> _campaign;
 
         #endregion
 
