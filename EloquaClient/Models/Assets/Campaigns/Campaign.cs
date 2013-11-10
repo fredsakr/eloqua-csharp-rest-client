@@ -1,8 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
-using Eloqua.Api.Rest.ClientLibrary.Models.Assets.ContentSections;
-using Eloqua.Api.Rest.ClientLibrary.Models.Assets.DynamicContents;
-using Eloqua.Api.Rest.ClientLibrary.Models.Content;
 
 namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Campaigns
 {

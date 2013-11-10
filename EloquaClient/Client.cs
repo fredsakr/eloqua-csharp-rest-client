@@ -23,17 +23,20 @@ namespace Eloqua.Api.Rest.ClientLibrary
 
         public AssetClient Assets
         {
-            get { return new AssetClient(BaseClient);}
+            get { return _assetClient ?? (_assetClient = new AssetClient(BaseClient)); }
         }
+        private AssetClient _assetClient;
 
         public DataClient Data
         {
-            get { return new DataClient(BaseClient); }
+            get { return _dataClient ?? (_dataClient = new DataClient(BaseClient)); }
         }
+        private DataClient _dataClient;
 
         public SystemClient Systems
         {
-            get { return new SystemClient(BaseClient); }
+            get { return _systemClient ?? (_systemClient = new SystemClient(BaseClient)); }
         }
+        private SystemClient _systemClient;
     }
 }
