@@ -1,5 +1,4 @@
-﻿using Eloqua.Api.Rest.ClientLibrary.Serializers;
-using RestSharp;
+﻿using RestSharp;
 using Eloqua.Api.Rest.ClientLibrary.Models;
 using RestSharp.Deserializers;
 
@@ -33,43 +32,39 @@ namespace Eloqua.Api.Rest.ClientLibrary
             return response.Data;
         }
 
-        public T Get<T>(int id, Depth depth = Depth.complete) where T : RestObject, new()
+        public T Get<T>(T data) where T : RestObject, new()
         {
-            var item = new T { id = id, depth = depth.ToString()};
-            var request = Request.Get(Request.Type.Get, item);
+            var request = Request.Get(Request.Type.Get, data);
             return Execute<T>(request);
         }
 
-        public void Delete<T>(int? id) where T : RestObject, new()
+        public void Delete<T>(T data) where T : RestObject, new()
         {
-            var item = new T { id = id };
-            var request = Request.Get(Request.Type.Delete, item);
+            var request = Request.Get(Request.Type.Delete, data);
             Execute<T>(request);
         }
 
-        public T Post<T>(T restObj) where T : RestObject, new()
+        public T Post<T>(T data) where T : RestObject, new()
         {
-            var request = Request.Get(Request.Type.Post, restObj);
+            var request = Request.Get(Request.Type.Post, data);
             return Execute<T>(request);
         }
 
-        public T Put<T>(T restObj) where T : RestObject, new()
+        public T Put<T>(T data) where T : RestObject, new()
         {
-            var request = Request.Get(Request.Type.Put, restObj);
+            var request = Request.Get(Request.Type.Put, data);
             return Execute<T>(request);
         }
 
-        public SearchResponse<T> Get<T>(string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
+        public SearchResponse<T> Search<T>(T data) where T : RestObject, ISearchable, new()
         {
-            var items = new T { searchTerm = searchTerm, page = pageNumber, pageSize = pageSize, depth = depth.ToString()};
-            var request = Request.Get(Request.Type.Search, items);
+            var request = Request.Get(Request.Type.Search, data);
             return Execute<SearchResponse<T>>(request);
         }
 
-        public SearchResponse<T> Get<T>(int? id, string searchTerm, int pageNumber, int pageSize, Depth depth = Depth.complete) where T : RestObject, ISearchable, new()
+        public SearchResponse<T> Search<T>(int id, T data) where T : RestObject, ISearchable, new()
         {
-            var items = new T { id = id, searchTerm = searchTerm, page = pageNumber, pageSize = pageSize, depth = Depth.complete.ToString()};
-            var request = Request.Get(Request.Type.Search, items);
+            var request = Request.Get(Request.Type.Search, data);
             return Execute<SearchResponse<T>>(request);
         }
     }

@@ -12,32 +12,47 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients
 
         public T Get(int id, Depth depth = Depth.minimal)
         {
-            return _baseClient.Get<T> (id, depth);
+            var data = new T { id = id, depth = depth.ToString() };
+            return _baseClient.Get<T>(data);
         }
 
-        public SearchResponse<T> Get(string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
+        public T Post(T data)
         {
-            return _baseClient.Get<T> (search, pageNumber, pageSize, depth);
+            return _baseClient.Post<T>(data);
         }
 
-        public SearchResponse<T> Get(int? id, string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
+        public T Put(T data)
         {
-            return _baseClient.Get<T>(id, search, pageNumber, pageSize, depth);
-        }
-
-        public T Post(T restObj)
-        {
-            return _baseClient.Post<T>(restObj);
-        }
-
-        public T Put(T restObj)
-        {
-            return _baseClient.Put(restObj);
+            return _baseClient.Put(data);
         }
 
         public void Delete(int? id)
         {
-            _baseClient.Delete<T> (id);
+            var data = new T { id = id };
+            _baseClient.Delete<T>(data);
+        }
+
+        public SearchResponse<T> Get(string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
+        {
+            return _baseClient.Search<T>(new T
+                {
+                    searchTerm = search,
+                    page = pageNumber,
+                    pageSize = pageSize,
+                    depth = depth.ToString()
+                });
+        }
+
+        public SearchResponse<T> Get(int? id, string search, int pageNumber, int pageSize, Depth depth = Depth.complete)
+        {
+            return _baseClient.Search<T>(new T
+                    {
+                        id = id,
+                        searchTerm = search,
+                        page = pageNumber,
+                        pageSize = pageSize,
+                        depth = depth.ToString()
+                    });
         }
     }
 }
