@@ -74,6 +74,7 @@
     <Compile Include="Clients\Data\ContactClientTests.cs" />
     <Compile Include="Clients\Data\CustomObjectClientTests.cs" />
     <Compile Include="Clients\Data\ExternalActivityClientTests.cs" />
+    <Compile Include="Clients\Data\FormClientTests.cs" />
     <Compile Include="Clients\Data\SubscriptionClientTests.cs" />
     <Compile Include="Clients\Systems\CloudDataClientTests.cs" />
     <Compile Include="Clients\Systems\UserClientTests.cs" />

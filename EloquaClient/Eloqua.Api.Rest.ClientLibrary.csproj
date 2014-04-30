@@ -123,6 +123,7 @@
     <Compile Include="Models\Data\Contacts\ContactListMember.cs" />
     <Compile Include="Models\Data\ExternalActivities\Activity.cs" />
     <Compile Include="Models\Data\ExternalActivities\ExternalActivities.cs" />
+    <Compile Include="Models\Data\Forms\FormData.cs" />
     <Compile Include="Models\Errors\ObjectKey.cs" />
     <Compile Include="Models\Errors\ObjectValidationError.cs" />
     <Compile Include="Models\Errors\ValidationError.cs" />
