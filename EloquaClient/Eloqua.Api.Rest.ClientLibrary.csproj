@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\Data\CustomObjectDataClient.cs" />
     <Compile Include="Models\Account\AccountInfo.cs" />
     <Compile Include="Clients\Assets\AssetClient.cs" />
     <Compile Include="Clients\Data\ActivityClient.cs" />
@@ -151,7 +152,7 @@
     <Compile Include="Models\Content\HtmlContent.cs" />
     <Compile Include="Models\Content\RawHtmlContent.cs" />
     <Compile Include="Models\Data\Contacts\Contact.cs" />
-    <Compile Include="Models\Data\CustomObjects\CustomObject.cs" />
+    <Compile Include="Models\Data\CustomObjectData\CustomObjectData.cs" />
     <Compile Include="Models\FieldValue.cs" />
     <Compile Include="Models\SearchResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

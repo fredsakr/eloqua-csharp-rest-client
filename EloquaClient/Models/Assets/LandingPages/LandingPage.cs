@@ -18,7 +18,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.LandingPages
         public string style { get; set; }
         public int? updatedAt { get; set; }
         public int? updatedBy { get; set; }
-        public string name { get; set; }
+        public new string name { get; set; }
 
         #region ISearchable
 

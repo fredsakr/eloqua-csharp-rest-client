@@ -72,7 +72,7 @@
     <Compile Include="Clients\Constants.cs" />
     <Compile Include="Clients\Data\ActivityClientTests.cs" />
     <Compile Include="Clients\Data\ContactClientTests.cs" />
-    <Compile Include="Clients\Data\CustomObjectClientTests.cs" />
+    <Compile Include="Clients\Data\CustomObjectDataClientTests.cs" />
     <Compile Include="Clients\Data\ExternalActivityClientTests.cs" />
     <Compile Include="Clients\Data\FormClientTests.cs" />
     <Compile Include="Clients\Data\SubscriptionClientTests.cs" />

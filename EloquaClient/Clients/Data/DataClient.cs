@@ -1,5 +1,5 @@
 ﻿using Eloqua.Api.Rest.ClientLibrary.Models.Data.Contacts;
-using Eloqua.Api.Rest.ClientLibrary.Models.Data.CustomObjects;
+using Eloqua.Api.Rest.ClientLibrary.Models.Data.CustomObjectData;
 using Eloqua.Api.Rest.ClientLibrary.Models.Data.Account;
 using Eloqua.Api.Rest.ClientLibrary.Models.Data.Forms;
 
@@ -73,11 +73,11 @@ namespace Eloqua.Api.Rest.ClientLibrary.Clients.Data
 
         #region CustomObjects
 
-        public GenericClient<CustomObject> CustomObject
+        public CustomObjectDataClient<CustomObjectData> CustomObjectData
         {
-            get { return _customObjectDataClient ?? (_customObjectDataClient = new GenericClient<CustomObject>(BaseClient)); }
+            get { return _customObjectDataClient ?? (_customObjectDataClient = new CustomObjectDataClient<CustomObjectData>(BaseClient)); }
         }
-        private GenericClient<CustomObject> _customObjectDataClient;
+        private CustomObjectDataClient<CustomObjectData> _customObjectDataClient;
 
         #endregion
 
