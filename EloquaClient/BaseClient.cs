@@ -1,6 +1,7 @@
 ﻿using RestSharp;
 using Eloqua.Api.Rest.ClientLibrary.Models;
 using RestSharp.Deserializers;
+using RestSharp.Authenticators;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
@@ -12,7 +13,7 @@ namespace Eloqua.Api.Rest.ClientLibrary
         {
             Client = new RestClient
             {
-                BaseUrl = baseUrl,
+                BaseUrl = new System.Uri(baseUrl),
                 Authenticator = new HttpBasicAuthenticator(site + "\\" + user, password)
             };
 
