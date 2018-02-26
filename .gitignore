@@ -8,3 +8,4 @@ Build
 packages
 *.DotSettings.user
 nuget.exe
+.vs/
