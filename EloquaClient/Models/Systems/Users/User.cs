@@ -10,7 +10,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Systems.Users
         public int? defaultContactViewId { get; set; }
         public string emailAddress { get; set; }
         public string loginName { get; set; }
-        public string name { get; set; }
+        public new string name { get; set; }
         public List<ProductPermission> productPermissions { get; set; }
         public List<TypePermissions> typePermissions { get; set; } 
 

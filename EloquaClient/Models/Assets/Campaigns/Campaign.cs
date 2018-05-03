@@ -8,7 +8,7 @@ namespace Eloqua.Api.Rest.ClientLibrary.Models.Assets.Campaigns
         public int? createdAt { get; set; }
         public int? createdBy { get; set; }
         public int? folderId { get; set; }
-        public string name { get; set; }
+        public new string name { get; set; }
         public int? updatedAt { get; set; }
         public int? updatedBy { get; set; }
         public float? actualCost { get; set; }

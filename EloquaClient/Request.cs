@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using RestSharp;
+using Eloqua.Api.Rest.ClientLibrary.Models.Data.CustomObjectData;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
@@ -68,6 +69,65 @@ namespace Eloqua.Api.Rest.ClientLibrary
                                     "&page=" + searchObj.page +
                                     "&depth=" + restObj.depth
                                     );
+
+                    request.Resource = resource.ToString();
+
+                    break;
+
+                default:
+                    throw new NotSupportedException(type.ToString());
+            }
+            return request;
+        }
+
+        internal static RestRequest Get(Type type, int parentId, CustomObjectData restObj)
+        {
+            restObj.type = restObj.Type;
+
+            var request = new RestRequest
+            {
+                RequestFormat = DataFormat.Json
+            };
+
+            switch (type)
+            {
+                case Type.Get:
+                    request.Method = Method.GET;
+                    request.Resource = restObj.Uri + "/" + parentId;
+                    request.Resource += "/instance/" + restObj.id + "?depth=" + restObj.depth;
+                    break;
+
+                case Type.Put:
+                    request.Method = Method.PUT;
+                    request.Resource = restObj.Uri + "/" + parentId;
+                    request.Resource += "/instance/" + restObj.id;
+                    request.AddBody(restObj);
+                    break;
+
+                case Type.Post:
+                    request.Method = Method.POST;
+                    request.Resource = restObj.Uri + "/" + parentId;
+                    request.Resource += "/instance";
+                    request.AddBody(restObj);
+                    break;
+
+                case Type.Delete:
+                    request.Method = Method.DELETE;
+                    request.Resource = restObj.Uri + "/" + parentId;
+                    request.Resource += "/instance/" + restObj.id;
+                    break;
+
+                case Type.Search:
+                    request.Method = Method.GET;
+
+                    var resource = new StringBuilder(100);
+                    resource.Append(restObj.Uri + "/" + parentId);
+
+                    var searchObj = restObj as ISearchable;
+                    resource.Append("/instances?count=" + searchObj.pageSize +
+                                    "&page=" + searchObj.page +
+                                    "&depth=" + restObj.depth +
+                                    "&search=" + searchObj.searchTerm);
 
                     request.Resource = resource.ToString();
 

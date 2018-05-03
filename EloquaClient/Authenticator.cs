@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using RestSharp.Authenticators;
 
 namespace Eloqua.Api.Rest.ClientLibrary
 {
